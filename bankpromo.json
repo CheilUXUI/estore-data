@@ -1,0 +1,43 @@
+[
+  {
+    "key": "hsbc",
+    "name": "HSBC",
+    "logo": "https://create.hsbc/content/dam/brandhub/brand/ld-history/hexagon_1192x671.jpg",
+    "tiers": [
+      {
+        "max": 100000,
+        "percent": 0.04
+      }
+    ],
+    "maximum": 400,
+    "fixedDiscount": null
+  },
+  {
+    "key": "boc",
+    "name": "BOC",
+    "logo": "https://companieslogo.com/img/orig/2388.HK_BIG-9ff8bfa3.png?t=1720244490",
+    "tiers": [
+      {
+        "max": 3000,
+        "percent": 0.01
+      },
+      {
+        "max": 10000,
+        "percent": 0.04
+      },
+      {
+        "max": 15000,
+        "percent": 0.05
+      },
+      {
+        "max": 100000,
+        "percent": 0.06
+      }
+    ],
+    "maximum": 2000,
+    "fixedDiscount": {
+      "name": "BOC Visa Card Weekend Offer",
+      "value": 200
+    }
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "GiftCode": "S26U_Gift001",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "EP-T5020XBEGGB",
+    "SKU Name": "50W PD Power Adapter T5020 (With 5A USB-c to USB-C cable)",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk/ep-t5020xbeggb/gallery/hk-50w-power-adapter-duo-ep-t5020-ep-t5020xbeggb-542105839?$1164_776_PNG$",
+    "Price": "Free",
+    "Parent Model": "Galaxy S26 Ultra",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "S26U_Gift002",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "EF-SS948CLEGWW",
+    "SKU Name": "Galaxy S26 Ultra Slim Magnet Case",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk_en/s2602/gallery/hk-en-galaxy-s26ultra-ss948-ef-ss948clegww-550973073?$1164_776_PNG$",
+    "Price": "Free",
+    "Parent Model": "Galaxy S26 Ultra",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "S26U_Gift003",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "EP-P2900BBEGWW",
+    "SKU Name": "Magnet Wireless Charger",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk_en/s2602/gallery/hk-en-ep-p2900-ep-p2900bbegww-550976156?$1164_776_PNG$",
+    "Price": "$50",
+    "Parent Model": "Galaxy S26 Ultra",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "S26U_Gift004",
+    "Mode": "AddCode",
+    "SKU_PromoCode": "HKQR2026",
+    "SKU Name": "eStore Coupon ($400)",
+    "SKU Image": "https://static.vecteezy.com/system/resources/previews/023/642/809/non_2x/coupon-icon-isolated-on-white-background-vector.jpg",
+    "Price": "Free",
+    "Parent Model": "Galaxy S26 Ultra",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "S26U_Gift005",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "SM-R640NZWATGY",
+    "SKU Name": "Galaxy Buds4 Pro",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk/s2602/gallery/hk-galaxy-buds4-r640-sm-r640nzwatgy-550999471?imbypass=true",
+    "Price": "$500",
+    "Parent Model": "Galaxy S26 Ultra",
+    "Active": "N"
+  },
+  {
+    "GiftCode": "Fold7_Gift001",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "EP-T5020XBEGGB",
+    "SKU Name": "50W PD Power Adapter T5020 (With 5A USB-c to USB-C cable)",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk/ep-t5020xbeggb/gallery/hk-50w-power-adapter-duo-ep-t5020-ep-t5020xbeggb-542105839?$1164_776_PNG$",
+    "Price": "Free",
+    "Parent Model": "Galaxy Z Fold7",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "Fold7_Gift002",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "GP-FFF966YCATW",
+    "SKU Name": "Galaxy Z Fold7 Clear Magnet Case",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk_en/f2507/gallery/hk-en-galaxy-z-fold7-clear-magnet-case-gp-fff966ycatw-547671293?$1164_776_PNG$",
+    "Price": "Free",
+    "Parent Model": "Galaxy Z Fold7",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "Fold7_Gift003",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "EP-P2900BBEGWW",
+    "SKU Name": "Magnet Wireless Charger",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk_en/s2602/gallery/hk-en-ep-p2900-ep-p2900bbegww-550976156?$1164_776_PNG$",
+    "Price": "$50",
+    "Parent Model": "Galaxy Z Fold7",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "Fold7_Gift004",
+    "Mode": "AddCode",
+    "SKU_PromoCode": "HKQR2026",
+    "SKU Name": "eStore Coupon ($300)",
+    "SKU Image": "https://static.vecteezy.com/system/resources/previews/023/642/809/non_2x/coupon-icon-isolated-on-white-background-vector.jpg",
+    "Price": "Free",
+    "Parent Model": "Galaxy Z Fold7",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "Flip7_Gift001",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "EP-T5020XBEGGB",
+    "SKU Name": "50W PD Power Adapter T5020 (With 5A USB-c to USB-C cable)",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk/ep-t5020xbeggb/gallery/hk-50w-power-adapter-duo-ep-t5020-ep-t5020xbeggb-542105839?$1164_776_PNG$",
+    "Price": "Free",
+    "Parent Model": "Galaxy Z Flip7",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "Flip7_Gift002",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "GP-FPF766PGBTW",
+    "SKU Name": "Galaxy Z Flip7 Capella",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk_en/f2507/gallery/hk-en-galaxy-z-flip7-capella-gp-fpf766pgbtw-547670376?$1164_776_PNG$",
+    "Price": "Free",
+    "Parent Model": "Galaxy Z Flip7",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "Flip7_Gift003",
+    "Mode": "AddSKU",
+    "SKU_PromoCode": "EP-P2900BBEGWW",
+    "SKU Name": "Magnet Wireless Charger",
+    "SKU Image": "https://images.samsung.com/is/image/samsung/p6pim/hk_en/s2602/gallery/hk-en-ep-p2900-ep-p2900bbegww-550976156?$1164_776_PNG$",
+    "Price": "$50",
+    "Parent Model": "Galaxy Z Flip7",
+    "Active": "Y"
+  },
+  {
+    "GiftCode": "Flip7_Gift004",
+    "Mode": "AddCode",
+    "SKU_PromoCode": "HKQR2026",
+    "SKU Name": "eStore Coupon ($200)",
+    "SKU Image": "https://static.vecteezy.com/system/resources/previews/023/642/809/non_2x/coupon-icon-isolated-on-white-background-vector.jpg",
+    "Price": "Free",
+    "Parent Model": "Galaxy Z Flip7",
+    "Active": "Y"
+  }
+]

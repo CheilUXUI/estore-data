@@ -1,25 +1,19 @@
 [
   {
-    "key": "hsbc",
-    "name": "HSBC",
-    "logo": "https://create.hsbc/content/dam/brandhub/brand/ld-history/hexagon_1192x671.jpg",
-    "tiers": [
-      {
-        "max": 100000,
-        "percent": 0.04
-      }
-    ],
-    "maximum": 400,
-    "fixedDiscount": null
-  },
-  {
-    "key": "boc",
-    "name": "BOC",
-    "logo": "https://companieslogo.com/img/orig/2388.HK_BIG-9ff8bfa3.png?t=1720244490",
+    "key": "bankofchina(hk)creditcard",
+    "name": {
+      "en": "Bank of China (HK) Credit Card",
+      "zh": "中銀香港信用卡"
+    },
+    "rebateName": {
+      "en": "Samsung | BOC(HK) Credit Card Rebate",
+      "zh": "Samsung | 中銀香港信用卡回贈"
+    },
+    "logo": "img/logo-bochk.png",
     "tiers": [
       {
         "max": 3000,
-        "percent": 0.01
+        "percent": 0
       },
       {
         "max": 10000,
@@ -36,8 +30,35 @@
     ],
     "maximum": 2000,
     "fixedDiscount": {
-      "name": "BOC Visa Card Weekend Offer",
+      "name": {
+        "en": "BOC Visa Credit Card Amazing Local Rewards Holidays Offer",
+        "zh": "中銀香港Visa「狂賞派」「紅日」額外回贈"
+      },
       "value": 200
-    }
+    },
+    "priority": 1,
+    "isRecommended": true
+  },
+  {
+    "key": "hsbccreditcard",
+    "name": {
+      "en": "HSBC Credit Card",
+      "zh": "滙豐信用卡"
+    },
+    "rebateName": {
+      "en": "HSBC credit card 'Red Hot Rewards of Your Choice' up to",
+      "zh": "滙豐信用卡「最紅自主獎賞」高達"
+    },
+    "logo": "img/logo-hsbc.png",
+    "tiers": [
+      {
+        "max": 99999999,
+        "percent": 0.024
+      }
+    ],
+    "maximum": 400,
+    "fixedDiscount": null,
+    "priority": 2,
+    "isRecommended": false
   }
 ]

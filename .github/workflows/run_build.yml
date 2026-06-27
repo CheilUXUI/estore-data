@@ -17,10 +17,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Dependencies
-        run: npm install # If your scripts require packages like axios or csv-parse
+        run: npm install
 
       - name: Run Build Script
         env:

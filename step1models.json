@@ -1,126 +1,72 @@
 [
   {
-    "name": "Galaxy Z Fold7",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-z-fold7-f966-sm-f9660dbgtgy-547656345?imbypass=true",
-    "storageOptions": [
-      {
-        "storage": "256GB+12GB",
-        "price": 14438,
-        "colors": [
-          {
-            "name": "Blue Shadow",
-            "sku": "SM-F9660DBDTGY"
-          },
-          {
-            "name": "Jetblack",
-            "sku": "SM-F9660ZKDTGY"
-          },
-          {
-            "name": "Silver Shadow",
-            "sku": "SM-F9660ZSDTGY"
-          },
-          {
-            "name": "Mint",
-            "sku": "SM-F9660LGDTGY"
-          }
-        ]
-      },
-      {
-        "storage": "512GB+12GB",
-        "price": 16798,
-        "colors": [
-          {
-            "name": "Blue Shadow",
-            "sku": "SM-F9660DBGTGY"
-          },
-          {
-            "name": "Jetblack",
-            "sku": "SM-F9660ZKGTGY"
-          },
-          {
-            "name": "Silver Shadow",
-            "sku": "SM-F9660ZSGTGY"
-          },
-          {
-            "name": "Mint",
-            "sku": "SM-F9660LGGTGY"
-          }
-        ]
-      },
-      {
-        "storage": "1TB+16GB",
-        "price": 17998,
-        "colors": [
-          {
-            "name": "Blue Shadow",
-            "sku": "SM-F9660DBHTGY"
-          },
-          {
-            "name": "Jetblack",
-            "sku": "SM-F9660ZKHTGY"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Galaxy Z Flip7",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-zflip7-f766-sm-f7660dbatgy-547656635?imbypass=true",
-    "storageOptions": [
-      {
-        "storage": "256GB+12GB",
-        "price": 5998,
-        "colors": [
-          {
-            "name": "Blue Shadow",
-            "sku": "SM-F7660DBATGY"
-          },
-          {
-            "name": "Jetblack",
-            "sku": "SM-F7660ZKATGY"
-          },
-          {
-            "name": "Mint",
-            "sku": "SM-F7660LGATGY"
-          },
-          {
-            "name": "Coralred",
-            "sku": "SM-F7660ZRATGY"
-          }
-        ]
-      },
-      {
-        "storage": "512GB+12GB",
-        "price": 8998,
-        "colors": [
-          {
-            "name": "Blue Shadow",
-            "sku": "SM-F7660DBETGY"
-          },
-          {
-            "name": "Jetblack",
-            "sku": "SM-F7660ZKETGY"
-          },
-          {
-            "name": "Mint",
-            "sku": "SM-F7660LGETGY"
-          },
-          {
-            "name": "Coralred",
-            "sku": "SM-F7660ZRETGY"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Galaxy S26 Ultra",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/s2602/gallery/hk-galaxy-s26-ultra-s948-sm-s9480zkptgy-550821367?imbypass=true",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/s2602/gallery/hk-galaxy-s26-ultra-s948-578324-sm-s9480zsptgy-550823970?imbypass=true",
     "storageOptions": [
       {
-        "storage": "256GB+12GB",
-        "price": 10198,
+        "storage": "1TB | 16GB",
+        "price": 20000,
         "colors": [
+          {
+            "name": "Silver Shadow",
+            "sku": "SM-S9480ZSPTGY"
+          },
+          {
+            "name": "Pink Gold",
+            "sku": "SM-S9480ZDPTGY"
+          },
+          {
+            "name": "Black",
+            "sku": "SM-S9480ZKPTGY"
+          },
+          {
+            "name": "Cobalt Violet",
+            "sku": "SM-S9480ZVPTGY"
+          },
+          {
+            "name": "Sky Blue",
+            "sku": "SM-S9480LBPTGY"
+          }
+        ]
+      },
+      {
+        "storage": "512GB | 12GB",
+        "price": 12000,
+        "colors": [
+          {
+            "name": "Silver Shadow",
+            "sku": "SM-S9480ZSOTGY"
+          },
+          {
+            "name": "Pink Gold",
+            "sku": "SM-S9480ZDOTGY"
+          },
+          {
+            "name": "Black",
+            "sku": "SM-S9480ZKOTGY"
+          },
+          {
+            "name": "Cobalt Violet",
+            "sku": "SM-S9480ZVOTGY"
+          },
+          {
+            "name": "Sky Blue",
+            "sku": "SM-S9480LBOTGY"
+          },
+          {
+            "name": "White",
+            "sku": "SM-S9480ZWOTGY"
+          }
+        ]
+      },
+      {
+        "storage": "256GB | 12GB",
+        "price": 10000,
+        "colors": [
+          {
+            "name": "Pink Gold",
+            "sku": "SM-S9480ZDITGY"
+          },
           {
             "name": "Black",
             "sku": "SM-S9480ZKITGY"
@@ -138,68 +84,122 @@
             "sku": "SM-S9480LBITGY"
           },
           {
-            "name": "Pink Gold",
-            "sku": "SM-S9480ZDITGY"
-          },
-          {
             "name": "White",
             "sku": "SM-S9480ZWITGY"
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "name": "Galaxy Z Flip7",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-zflip7-f766-555701-sm-f7660lgatgy-547656871?imbypass=true",
+    "storageOptions": [
       {
-        "storage": "512GB+12GB",
-        "price": 11798,
+        "storage": "512GB | 12GB",
+        "price": 9000,
         "colors": [
           {
-            "name": "Black",
-            "sku": "SM-S9480ZKOTGY"
+            "name": "Mint",
+            "sku": "SM-F7660LGETGY"
           },
           {
-            "name": "Cobalt Violet",
-            "sku": "SM-S9480ZVOTGY"
+            "name": "Blue Shadow",
+            "sku": "SM-F7660DBETGY"
           },
           {
-            "name": "Silver Shadow",
-            "sku": "SM-S9480ZSOTGY"
+            "name": "Jetblack",
+            "sku": "SM-F7660ZKETGY"
           },
           {
-            "name": "Sky Blue",
-            "sku": "SM-S9480LBOTGY"
-          },
-          {
-            "name": "Pink Gold",
-            "sku": "SM-S9480ZDOTGY"
-          },
-          {
-            "name": "White",
-            "sku": "SM-S9480ZWOTGY"
+            "name": "Coralred",
+            "sku": "SM-F7660ZRETGY"
           }
         ]
       },
       {
-        "storage": "1TB+16GB",
-        "price": 13798,
+        "storage": "256GB | 12GB",
+        "price": 6000,
         "colors": [
           {
-            "name": "Black",
-            "sku": "SM-S9480ZKPTGY"
+            "name": "Mint",
+            "sku": "SM-F7660LGATGY"
           },
           {
-            "name": "Cobalt Violet",
-            "sku": "SM-S9480ZVPTGY"
+            "name": "Blue Shadow",
+            "sku": "SM-F7660DBATGY"
+          },
+          {
+            "name": "Jetblack",
+            "sku": "SM-F7660ZKATGY"
+          },
+          {
+            "name": "Coralred",
+            "sku": "SM-F7660ZRATGY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Galaxy Z Fold7",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-z-fold7-f966-sm-f9660dbgtgy-547656345?imbypass=true",
+    "storageOptions": [
+      {
+        "storage": "1TB | 16GB",
+        "price": 20000,
+        "colors": [
+          {
+            "name": "Blue Shadow",
+            "sku": "SM-F9660DBHTGY"
+          },
+          {
+            "name": "Jetblack",
+            "sku": "SM-F9660ZKHTGY"
+          }
+        ]
+      },
+      {
+        "storage": "512GB | 12GB",
+        "price": 18000,
+        "colors": [
+          {
+            "name": "Mint",
+            "sku": "SM-F9660LGGTGY"
+          },
+          {
+            "name": "Blue Shadow",
+            "sku": "SM-F9660DBGTGY"
+          },
+          {
+            "name": "Jetblack",
+            "sku": "SM-F9660ZKGTGY"
           },
           {
             "name": "Silver Shadow",
-            "sku": "SM-S9480ZSPTGY"
+            "sku": "SM-F9660ZSGTGY"
+          }
+        ]
+      },
+      {
+        "storage": "256GB | 12GB",
+        "price": 15000,
+        "colors": [
+          {
+            "name": "Mint",
+            "sku": "SM-F9660LGDTGY"
           },
           {
-            "name": "Sky Blue",
-            "sku": "SM-S9480LBPTGY"
+            "name": "Blue Shadow",
+            "sku": "SM-F9660DBDTGY"
           },
           {
-            "name": "Pink Gold",
-            "sku": "SM-S9480ZDPTGY"
+            "name": "Jetblack",
+            "sku": "SM-F9660ZKDTGY"
+          },
+          {
+            "name": "Silver Shadow",
+            "sku": "SM-F9660ZSDTGY"
           }
         ]
       }

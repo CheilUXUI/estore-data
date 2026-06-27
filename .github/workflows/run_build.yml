@@ -1,0 +1,40 @@
+name: Remote Build Script
+
+on:
+  repository_dispatch:
+    types: [run-build]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install # If your scripts require packages like axios or csv-parse
+
+      - name: Run Build Script
+        env:
+          SCRIPT_NAME: ${{ github.event.client_payload.script }}
+        run: node "$SCRIPT_NAME"
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Automated data rebuild: ${{ github.event.client_payload.script }}"
+            git push
+          else
+            echo "No changes detected."
+          fi

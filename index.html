@@ -1,1 +1,66 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repo Builder</title>
+</head>
+<body>
+
+    <h1>Trigger JSON Builds</h1>
+    
+    <label for="token">GitHub Personal Access Token:</label>
+    <input type="password" id="token" placeholder="ghp_xxxx..." /><br><br>
+
+    <div><button onclick="triggerBuild('build_recommendations.js')">1. Build New Device</button></div>
+    <div><button onclick="triggerBuild('build_step1models.js')">2. Build Step 1 Options</button></div>
+    <div><button onclick="triggerBuild('build_devices.js')">3. Build Trade-in Options</button></div>
+    <div><button onclick="triggerBuild('build_bankpromo.js')">4. Build Bank Pro Options</button></div>
+    <div><button onclick="triggerBuild('build_gifts.js')">5. Build Gift Options</button></div>
+
+    <p id="status"></p>
+
+    <script>
+        async function triggerBuild(scriptName) {
+            const token = document.getElementById('token').value;
+            const statusEl = document.getElementById('status');
+            
+            if (!token) {
+                alert('Please enter your GitHub Personal Access Token.');
+                return;
+            }
+
+            statusEl.innerText = `Triggering ${scriptName}...`;
+
+            // Replace with your GitHub Username and Repository Name
+            const OWNER = 'YOUR_GITHUB_USERNAME';
+            const REPO = 'YOUR_REPO_NAME';
+
+            try {
+                const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'run-build',
+                        client_payload: {
+                            script: scriptName
+                        }
+                    })
+                });
+
+                if (response.status === 204) {
+                    statusEl.innerText = `Success! ${scriptName} triggered. Check the GitHub Actions tab.`;
+                } else {
+                    const errData = await response.json();
+                    statusEl.innerText = `Failed: ${errData.message}`;
+                }
+            } catch (error) {
+                statusEl.innerText = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

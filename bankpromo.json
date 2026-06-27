@@ -9,7 +9,7 @@
       "en": "Samsung | BOC(HK) Credit Card Rebate",
       "zh": "Samsung | 中銀香港信用卡回贈"
     },
-    "logo": "img/logo-bochk.png",
+    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-bochk.png",
     "tiers": [
       {
         "max": 3000,
@@ -49,7 +49,7 @@
       "en": "HSBC credit card 'Red Hot Rewards of Your Choice' up to",
       "zh": "滙豐信用卡「最紅自主獎賞」高達"
     },
-    "logo": "img/logo-hsbc.png",
+    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-hsbc.png",
     "tiers": [
       {
         "max": 99999999,

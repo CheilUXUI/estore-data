@@ -8,7 +8,7 @@
     "selectStoragePlaceholder": "Storage",
     "selectColorTitle": "Color",
     "step3Title": "Trade-in an old device (optional)",
-    "noTradeInLabel": "My trade in device is not listed here, OR<br> I do not have a device to trade in",
+    "noTradeInLabel": "My trade in device is not listed here, OR <nobr>I do not have a device to trade in</nobr>",
     "noTradeInHelper": "Don't worry, more trade-in options are available on the cart page.",
     "stackableTradeIn": "Our newly launched “Stackable Trade-in Service” let you trade-in up to 3 old devices to get a new phone. Upgrade is easy!",
     "brandLabel": "Brand",

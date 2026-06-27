@@ -1,0 +1,24 @@
+{
+  "name": "hkbuypage",
+  "version": "1.0.0",
+  "description": "A self-contained single-page web application used to sell Galaxy devices in Hong Kong with a focus on **trade-in**, **bank promotions**, and **gift selection**.",
+  "main": "build_bankpromo.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexyapsl/HKBuyPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alexyapsl/HKBuyPage/issues"
+  },
+  "homepage": "https://github.com/alexyapsl/HKBuyPage#readme"
+}

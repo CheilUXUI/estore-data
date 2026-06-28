@@ -76,4 +76,32 @@ function fetchGoogleSheet() {
 
   console.log('Fetching translations from Google Sheets...');
   
-  https.get(SHEET_URL,
+  https.get(SHEET_URL, (res) => {
+    if (res.statusCode === 302 || res.statusCode === 301) {
+      // Handle potential Google authentication or export redirects
+      https.get(res.headers.location, (redirectRes) => {
+        handleResponse(redirectRes);
+      });
+    } else {
+      handleResponse(res);
+    }
+  }).on('error', (err) => {
+    console.error('Network error while fetching sheet:', err.message);
+  });
+}
+
+function handleResponse(res) {
+  if (res.statusCode !== 200) {
+    console.error(`Failed to fetch sheet. Status Code: ${res.statusCode}. Ensure the sheet link sharing settings are set to 'Anyone with the link can view'.`);
+    process.exit(1);
+  }
+
+  let csvData = '';
+  res.setEncoding('utf8');
+  res.on('data', (chunk) => { csvData += chunk; });
+  res.on('end', () => {
+    convertCsvToLocalesJson(csvData);
+  });
+}
+
+fetchGoogleSheet();

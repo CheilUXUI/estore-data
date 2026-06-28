@@ -68,6 +68,27 @@ function convertCsvToLocalesJson(csvData) {
   console.log(`Successfully pulled spreadsheet data and generated: ${jsonOutputPath}`);
 }
 
+function fetchWithRedirects(url) {
+  https.get(url, (res) => {
+    // Handle 301, 302, 303, 307, and 308 redirect codes
+    if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
+      fetchWithRedirects(res.headers.location);
+    } else if (res.statusCode !== 200) {
+      console.error(`Failed to fetch sheet. Status Code: ${res.statusCode}. Ensure the sheet link sharing settings are set to 'Anyone with the link can view'.`);
+      process.exit(1);
+    } else {
+      let csvData = '';
+      res.setEncoding('utf8');
+      res.on('data', (chunk) => { csvData += chunk; });
+      res.on('end', () => {
+        convertCsvToLocalesJson(csvData);
+      });
+    }
+  }).on('error', (err) => {
+    console.error('Network error while fetching sheet:', err.message);
+  });
+}
+
 function fetchGoogleSheet() {
   if (SHEET_ID === 'TO_BE_PROVIDED') {
     console.error('Error: Please replace SHEET_ID with your actual Google Sheet ID.');
@@ -75,33 +96,7 @@ function fetchGoogleSheet() {
   }
 
   console.log('Fetching translations from Google Sheets...');
-  
-  https.get(SHEET_URL, (res) => {
-    if (res.statusCode === 302 || res.statusCode === 301) {
-      // Handle potential Google authentication or export redirects
-      https.get(res.headers.location, (redirectRes) => {
-        handleResponse(redirectRes);
-      });
-    } else {
-      handleResponse(res);
-    }
-  }).on('error', (err) => {
-    console.error('Network error while fetching sheet:', err.message);
-  });
-}
-
-function handleResponse(res) {
-  if (res.statusCode !== 200) {
-    console.error(`Failed to fetch sheet. Status Code: ${res.statusCode}. Ensure the sheet link sharing settings are set to 'Anyone with the link can view'.`);
-    process.exit(1);
-  }
-
-  let csvData = '';
-  res.setEncoding('utf8');
-  res.on('data', (chunk) => { csvData += chunk; });
-  res.on('end', () => {
-    convertCsvToLocalesJson(csvData);
-  });
+  fetchWithRedirects(SHEET_URL);
 }
 
 fetchGoogleSheet();

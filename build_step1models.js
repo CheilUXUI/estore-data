@@ -26,7 +26,7 @@ productsList.forEach(p => {
     modelMap[modelName] = {
       name: modelName,
       family: family,
-      baseCode = baseCode,
+      baseCode: baseCode,
       image: image,
       storageOptions: []
     };

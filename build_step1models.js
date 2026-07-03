@@ -11,7 +11,9 @@ const modelMap = {};
 productsList.forEach(p => {
   if (p.showInHKBuyPage !== true) return;
 
+  const family = p.family || '';
   const modelName = p.model || '';
+  const baseCode = p.baseCode || '';
   const image = p.image || '';
   const storage = p.storage || '';
   const colorName = p.colorEn || '';
@@ -23,6 +25,8 @@ productsList.forEach(p => {
   if (!modelMap[modelName]) {
     modelMap[modelName] = {
       name: modelName,
+      family: family,
+      baseCode = baseCode,
       image: image,
       storageOptions: []
     };

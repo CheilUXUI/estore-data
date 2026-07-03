@@ -1,6 +1,8 @@
 [
   {
     "name": "Galaxy S26 Ultra",
+    "family": "s26u",
+    "baseCode": "SM-S9480",
     "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/s2602/gallery/hk-galaxy-s26-ultra-s948-578324-sm-s9480zsptgy-550823970?imbypass=true",
     "storageOptions": [
       {
@@ -92,57 +94,9 @@
     ]
   },
   {
-    "name": "Galaxy Z Flip7",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-zflip7-f766-555701-sm-f7660lgatgy-547656871?imbypass=true",
-    "storageOptions": [
-      {
-        "storage": "512GB | 12GB",
-        "price": 9000,
-        "colors": [
-          {
-            "name": "Mint",
-            "sku": "SM-F7660LGETGY"
-          },
-          {
-            "name": "Blue Shadow",
-            "sku": "SM-F7660DBETGY"
-          },
-          {
-            "name": "Jetblack",
-            "sku": "SM-F7660ZKETGY"
-          },
-          {
-            "name": "Coralred",
-            "sku": "SM-F7660ZRETGY"
-          }
-        ]
-      },
-      {
-        "storage": "256GB | 12GB",
-        "price": 6000,
-        "colors": [
-          {
-            "name": "Mint",
-            "sku": "SM-F7660LGATGY"
-          },
-          {
-            "name": "Blue Shadow",
-            "sku": "SM-F7660DBATGY"
-          },
-          {
-            "name": "Jetblack",
-            "sku": "SM-F7660ZKATGY"
-          },
-          {
-            "name": "Coralred",
-            "sku": "SM-F7660ZRATGY"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Galaxy Z Fold7",
+    "family": "zfold7",
+    "baseCode": "SM-F9660",
     "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-z-fold7-f966-sm-f9660dbgtgy-547656345?imbypass=true",
     "storageOptions": [
       {
@@ -200,6 +154,58 @@
           {
             "name": "Silver Shadow",
             "sku": "SM-F9660ZSDTGY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Galaxy Z Flip7",
+    "family": "zflip7",
+    "baseCode": "SM-F7660",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-zflip7-f766-555701-sm-f7660lgatgy-547656871?imbypass=true",
+    "storageOptions": [
+      {
+        "storage": "512GB | 12GB",
+        "price": 9000,
+        "colors": [
+          {
+            "name": "Mint",
+            "sku": "SM-F7660LGETGY"
+          },
+          {
+            "name": "Blue Shadow",
+            "sku": "SM-F7660DBETGY"
+          },
+          {
+            "name": "Jetblack",
+            "sku": "SM-F7660ZKETGY"
+          },
+          {
+            "name": "Coralred",
+            "sku": "SM-F7660ZRETGY"
+          }
+        ]
+      },
+      {
+        "storage": "256GB | 12GB",
+        "price": 6000,
+        "colors": [
+          {
+            "name": "Mint",
+            "sku": "SM-F7660LGATGY"
+          },
+          {
+            "name": "Blue Shadow",
+            "sku": "SM-F7660DBATGY"
+          },
+          {
+            "name": "Jetblack",
+            "sku": "SM-F7660ZKATGY"
+          },
+          {
+            "name": "Coralred",
+            "sku": "SM-F7660ZRATGY"
           }
         ]
       }

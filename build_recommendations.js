@@ -87,6 +87,7 @@ async function buildRecommendations() {
             const values = parseCSVLine(line);
 
             const product = {
+                family: values[get('Family')] || '',
                 model: values[get('Model Name')] || '',
                 baseCode: values[get('Base Code')] || '',
                 image: values[get('Key Visual Image')] || '',

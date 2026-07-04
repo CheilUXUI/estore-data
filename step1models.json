@@ -1,7 +1,7 @@
 [
   {
     "name": "Galaxy Z Fold8 Ultra",
-    "family": "q8",
+    "family": "",
     "baseCode": "SM-F9760",
     "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-z-fold7-f966-sm-f9660zkgtgy-thumb-547656454?$Q90_330_330_F_PNG$",
     "storageOptions": [
@@ -67,7 +67,7 @@
   },
   {
     "name": "Galaxy Z Fold8",
-    "family": "h8",
+    "family": "",
     "baseCode": "SM-F9710",
     "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-z-fold7-f966-sm-f9660dbgtgy-thumb-547656346?$Q90_330_330_F_PNG$",
     "storageOptions": [
@@ -125,7 +125,7 @@
   },
   {
     "name": "Galaxy Z Flip8",
-    "family": "b8",
+    "family": "",
     "baseCode": "SM-F7760",
     "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-zflip7-f766-sm-f7660zkatgy-thumb-547656684?$Q90_330_330_F_PNG$",
     "storageOptions": [

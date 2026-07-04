@@ -25,6 +25,7 @@
         <div><button onclick="triggerBuild('build_locales.js')">6. Build Locales</button></div>
         
         <div><a href="https://drive.google.com/drive/folders/1eJu94b9BjlVMmegTjHMkdSAX34ejd60G?ths=true" target="_blank">Go to Google Sheet</a></div>
+        <div><a href="https://github.com/CheilUXUI/estore-data/actions" target="_blank">GitHub Actions tab</a></div>
     </div>
     
     <p id="status"></p>
@@ -62,7 +63,7 @@
                 });
 
                 if (response.status === 204) {
-                    statusEl.innerHtml = `Success! ${scriptName} triggered. Check the <a href="https://github.com/CheilUXUI/estore-data/actions" target="_blank">GitHub Actions tab</a>.`;
+                    statusEl.innerText = `Success! ${scriptName} triggered. Check the GitHub Actions Tab.`;
                 } else {
                     const errData = await response.json();
                     statusEl.innerText = `Failed: ${errData.message}`;

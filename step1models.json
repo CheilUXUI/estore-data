@@ -82,6 +82,10 @@
           {
             "name": "Lavender",
             "sku": "SM-F9710LVPTGY"
+          },
+          {
+            "name": "Pistachio",
+            "sku": "SM-F9710ZGPTGY"
           }
         ]
       },
@@ -100,6 +104,10 @@
           {
             "name": "Lavender",
             "sku": "SM-F9710LVOTGY"
+          },
+          {
+            "name": "Pistachio",
+            "sku": "SM-F9710ZGOTGY"
           }
         ]
       },
@@ -140,6 +148,10 @@
           {
             "name": "Pink",
             "sku": "SM-F7760LIPTGY"
+          },
+          {
+            "name": "Mint",
+            "sku": "SM-F7760LGPTGY"
           }
         ]
       },
@@ -158,6 +170,10 @@
           {
             "name": "Pink",
             "sku": "SM-F7760LIOTGY"
+          },
+          {
+            "name": "Mint",
+            "sku": "SM-F7760LGOTGY"
           }
         ]
       }

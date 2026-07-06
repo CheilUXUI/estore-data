@@ -3,12 +3,16 @@
     "name": "Galaxy Z Fold8 Ultra",
     "family": "q8",
     "baseCode": "SM-F9760",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-z-fold7-f966-sm-f9660zkgtgy-thumb-547656454?$Q90_330_330_F_PNG$",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-en-galaxy-z-fold8-ultra-f976-600605-sm-f9760dgptgy-553867735",
     "storageOptions": [
       {
         "storage": "1TB | 16GB",
         "price": 20798,
         "colors": [
+          {
+            "name": "Green Shadow",
+            "sku": "SM-F9760DGPTGY"
+          },
           {
             "name": "Graphite",
             "sku": "SM-F9760ZKPTGY"
@@ -16,10 +20,6 @@
           {
             "name": "Violet Shadow",
             "sku": "SM-F9760ZVPTGY"
-          },
-          {
-            "name": "Green Shadow",
-            "sku": "SM-F9760DGPTGY"
           }
         ]
       },
@@ -69,12 +69,16 @@
     "name": "Galaxy Z Fold8",
     "family": "h8",
     "baseCode": "SM-F9710",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-z-fold7-f966-sm-f9660dbgtgy-thumb-547656346?$Q90_330_330_F_PNG$",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-en-galaxy-z-fold8-f971-600620-sm-f9710zgptgy-553869028",
     "storageOptions": [
       {
         "storage": "1TB | 16GB",
         "price": 19198,
         "colors": [
+          {
+            "name": "Pistachio",
+            "sku": "SM-F9710ZGPTGY"
+          },
           {
             "name": "Graphite",
             "sku": "SM-F9710ZKPTGY"
@@ -82,10 +86,6 @@
           {
             "name": "Lavender",
             "sku": "SM-F9710LVPTGY"
-          },
-          {
-            "name": "Pistachio",
-            "sku": "SM-F9710ZGPTGY"
           }
         ]
       },
@@ -135,12 +135,16 @@
     "name": "Galaxy Z Flip8",
     "family": "b8",
     "baseCode": "SM-F7760",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2507/gallery/hk-galaxy-zflip7-f766-sm-f7660zkatgy-thumb-547656684?$Q90_330_330_F_PNG$",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-en-galaxy-zflip8-f776-600612-sm-f7760lgptgy-553868545",
     "storageOptions": [
       {
         "storage": "512GB | 12GB",
         "price": 11098,
         "colors": [
+          {
+            "name": "Mint",
+            "sku": "SM-F7760LGPTGY"
+          },
           {
             "name": "Graphite",
             "sku": "SM-F7760ZKPTGY"
@@ -148,10 +152,6 @@
           {
             "name": "Pink",
             "sku": "SM-F7760LIPTGY"
-          },
-          {
-            "name": "Mint",
-            "sku": "SM-F7760LGPTGY"
           }
         ]
       },

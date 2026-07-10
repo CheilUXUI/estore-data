@@ -5,9 +5,13 @@
       "en": "Bank of China (HK) Credit Card",
       "zh": "中銀香港信用卡"
     },
+    "max": {
+      "en": "Max. 11% Rebate",
+      "zh": "最高11%回贈"
+    },
     "rebateName": {
       "en": "Samsung | BOC(HK) Credit Card Rebate",
-      "zh": "Samsung | 中銀香港信用卡回贈"
+      "zh": "中銀信用卡 | Samsung 消費獎賞"
     },
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-bochk.png",
     "tiers": [
@@ -31,8 +35,8 @@
     "maximum": 2000,
     "fixedDiscount": {
       "name": {
-        "en": "BOC Visa Credit Card 'Amazing Local Rewards' 'Holidays' Offer",
-        "zh": "中銀香港Visa「狂賞派」「紅日」額外回贈"
+        "en": "BOC Visa Credit Card 'Amazing Local Rewards' 'Holidays' 5% Rebate up to",
+        "zh": "中銀Visa信用卡「狂賞派」「紅日」額外5%回贈"
       },
       "value": 200
     },
@@ -40,25 +44,99 @@
     "isRecommended": true
   },
   {
-    "key": "hsbccreditcard",
+    "key": "hsbcredcreditcard",
     "name": {
-      "en": "HSBC Credit Card",
-      "zh": "滙豐信用卡"
+      "en": "HSBC Red Credit Card",
+      "zh": "滙豐 Red 信用卡"
+    },
+    "max": {
+      "en": "Max. 4% Rebate",
+      "zh": "最高4%回贈"
     },
     "rebateName": {
-      "en": "HSBC credit card 'Red Hot Rewards of Your Choice' up to",
-      "zh": "滙豐信用卡「最紅自主獎賞」高達"
+      "en": "HSBC Red Credit Card",
+      "zh": "滙豐 Red 信用卡"
     },
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-hsbc.png",
     "tiers": [
       {
         "max": 99999999,
-        "percent": 0.024
+        "percent": 0
       }
     ],
-    "maximum": 400,
-    "fixedDiscount": null,
+    "maximum": 0,
+    "fixedDiscount": {
+      "name": {
+        "en": "HSBC credit card RewardCash Rebate up to",
+        "zh": "滙豐 Red 信用卡「獎賞錢」回贈高達"
+      },
+      "value": 500
+    },
     "priority": 2,
+    "isRecommended": false
+  },
+  {
+    "key": "hangsengmmpowerworldmastercard",
+    "name": {
+      "en": "Hang Seng MMPOWER World Mastercard",
+      "zh": "恒生 MMPOWER World Mastercard"
+    },
+    "max": {
+      "en": "Max. 5% Rebate",
+      "zh": "最高5%回贈"
+    },
+    "rebateName": {
+      "en": "Hang Seng MMPOWER World Mastercard",
+      "zh": "恒生 MMPOWER World Mastercard"
+    },
+    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-hsb.png",
+    "tiers": [
+      {
+        "max": 99999999,
+        "percent": 0
+      }
+    ],
+    "maximum": 0,
+    "fixedDiscount": {
+      "name": {
+        "en": "Hang Seng MMPOWER World Mastercard +FUN Dollars Rebate up to",
+        "zh": "恒生 MMPOWER World Mastercard +FUN Dollars回贈高達"
+      },
+      "value": 500
+    },
+    "priority": 3,
+    "isRecommended": false
+  },
+  {
+    "key": "aeoncardwakuwaku",
+    "name": {
+      "en": "AEON Card WAKUWAKU",
+      "zh": "AEON Card WAKUWAKU"
+    },
+    "max": {
+      "en": "Max. 6% Rebate",
+      "zh": "最高6%回贈"
+    },
+    "rebateName": {
+      "en": "AEON Card WAKUWAKU",
+      "zh": "AEON Card WAKUWAKU"
+    },
+    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-aeon.png",
+    "tiers": [
+      {
+        "max": 99999999,
+        "percent": 0
+      }
+    ],
+    "maximum": 0,
+    "fixedDiscount": {
+      "name": {
+        "en": "AEON CARD WAKUWAKU  Rebate up to",
+        "zh": "AEON CARD WAKUWAKU 回贈高達"
+      },
+      "value": 214
+    },
+    "priority": 4,
     "isRecommended": false
   }
 ]

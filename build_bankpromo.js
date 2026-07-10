@@ -68,6 +68,10 @@ async function buildBankPromo() {
                     en: values[get('Bank Name EN')] || values[get('Bank Name')] || '',
                     zh: values[get('Bank Name ZH')] || ''
                 },
+                max: {
+                    en: values[get('Max EN')] || values[get('Max')] || '',
+                    zh: values[get('Max ZH')] || ''
+                },
                 rebateName: {
                     en: values[get('Rebate Name EN')] || 'Credit Card Rebate',
                     zh: values[get('Rebate Name ZH')] || '信用卡回贈'

@@ -116,12 +116,13 @@
     "tradeinTitle": "Choose trade-in",
     "tradeinValuePrefix": "Your device trade-in value is",
     "tradeinWarningBodySpay": "Remember to activate the Samsung Pay discount with voucher code [ <b>SPAY2026</b> ].",
-    "tradeinWarningBodyTradeIn": "Remember to add your trade-in device to verify the IMEI/Serial number, and access its condition to enjoy the trade-in offer.",
-    "tradeinWarningTitle": "Reminder after adding to cart",
+    "tradeinWarningBodyTradeIn": "The trade-in quote is for reference only. Please add your trade-in device in cart with IMEI/Serial number and its condition to lock your trade-in price. ",
+    "tradeinWarningTitle": "Add your trade-in device in cart again",
     "tradeintitle": "Choose trade-in",
     "upgradeDiscounts": "Storage upgrade offer",
     "upgradeDiscountsAvailable": "半價容量升級",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "paymentDislaimer": "Disclaimer: The above payment rebate information provided is for reference only and subject to change by the respective banks without prior notice. Samsung Hong Kong bears no responsibility for offer discrepancies. Please refer to the officiall terms and conditions of the corresponding issuing banks for definitive details."
   },
   "zh": {
     "addGift": "加購",
@@ -240,11 +241,12 @@
     "tradeinTitle": "選擇Trade-in 以舊換新",
     "tradeinValuePrefix": "您的裝置以舊換新價值為",
     "tradeinWarningBodySpay": "記得使用優惠碼「<b>SPAY2026</b>」兌換 Samsung Pay優惠。",
-    "tradeinWarningBodyTradeIn": "記得重新添加Trade-in，驗證 IMEI/序號及填寫裝置狀況問卷，以確保您享受Trade-in回贈。",
-    "tradeinWarningTitle": "提提您，加入購物車後",
+    "tradeinWarningBodyTradeIn": "Trade-in報價只供參考。請在購物車重新添加Trade-in，驗證 IMEI/序號及填寫裝置狀況，以鎖定回收價格。",
+    "tradeinWarningTitle": "提提您在購物車重新添加Trade-in",
     "tradeintitle": "Trade-in 您的舊裝置",
     "upgradeDiscounts": "半價容量升級",
     "upgradeDiscountsAvailable": "半價容量升級",
-    "viewDetails": "查看詳情"
+    "viewDetails": "查看詳情",
+    "paymentDislaimer": "免責聲明：上述信用卡回贈資料僅供參考，並受相關發卡銀行的推廣條款及細則約束。有關優惠如有更改，恕不另行通知。三星香港對於任何資料不符概不承擔任何責任。務請參閱相關發卡銀行的官方條款及細則以獲取最終詳情。"
   }
 }

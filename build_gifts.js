@@ -62,8 +62,9 @@ async function buildGifts() {
             const giftCode = v[get('GiftCode')] || '';
             if (!giftCode) continue;
 
-            const sku = v[get('SKU_PromoCode')] || '';
-            const key = `${giftCode}|${sku}`;
+            const sku1 = v[get('SKU_PromoCode1')] || '';
+            const sku2 = v[get('SKU_PromoCode2')] || '';
+            const key = `${giftCode}|${sku1}`;
             
             if (seen.has(key)) continue; // dedupe
             seen.add(key);
@@ -71,7 +72,8 @@ async function buildGifts() {
             gifts.push({
                 GiftCode: giftCode,
                 Mode: v[get('Mode')] || '',
-                SKU_PromoCode: sku,
+                SKU_PromoCode1: sku1,
+                SKU_PromoCode2: sku2,
                 GiftNameEN: v[get('Gift_Name_EN')] || v[get('Gift Name EN')] || '',
                 GiftNameZH: v[get('Gift_Name_ZH')] || v[get('Gift Name ZH')] || '',
                 'SKU Image': v[get('SKU Image')] || '',

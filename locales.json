@@ -96,7 +96,7 @@
     "specialDiscount": "Special discount",
     "stackableTradeIn": "[Save more with Stackable Trade-in] You can now trade-in up to 3 old devices for any new devices!<br>Add more device in cart!",
     "tradeInDisclaimer": "*Estimated trade-in value is for reference only. The final trade-in price may be different from the estimation based on the inspection results.",
-    "step1Title": "Exclusive Pre-order Offer: <nobr>50% Off Storage Upgrade Offer</nobr>",
+    "step1Title": "<span><nobr>Exclusive Pre-order Offer: </nobr> <nobr>50% Off Storage Upgrade Offer</nobr></span>",
     "step1SelectDevice": "Choose your new device",
     "step2SelectColor": "Color",
     "step2SelectStorage": "Storage",
@@ -123,7 +123,7 @@
     "upgradeDiscounts": "Storage upgrade offer",
     "upgradeDiscountsAvailable": "Storage upgrade offer",
     "viewDetails": "View Details",
-    "paymentDislaimer": "# Disclaimer: The above payment rebate information provided is for reference only and subject to change by the respective banks without prior notice. Samsung Hong Kong bears no responsibility for offer discrepancies. Please refer to the officiall terms and conditions of the corresponding issuing banks for definitive details."
+    "paymentDislaimer": "# Disclaimer: The above payment rebate information provided is for reference only and subject to change by the respective banks without prior notice. Samsung Hong Kong bears no responsibility for offer discrepancies. Please refer to the officiall terms and conditions of the corresponding issuing banks for definitive details.<br>‡ Samsung | BOC(HK) Credit Card Rebate Please<a href=\"https://www.bochk.com/en/creditcard/promotions/offers/samsung202607.html\" target=\"_blank\">register here↗</a>"
   },
   "zh": {
     "addGift": "加購",
@@ -249,6 +249,6 @@
     "upgradeDiscounts": "半價容量升級",
     "upgradeDiscountsAvailable": "半價容量升級",
     "viewDetails": "查看詳情",
-    "paymentDislaimer": "# 免責聲明：上述信用卡回贈資料僅供參考，並受相關發卡銀行的推廣條款及細則約束。有關優惠如有更改，恕不另行通知。三星香港對於任何資料不符概不承擔任何責任。務請參閱相關發卡銀行的官方條款及細則以獲取最終詳情。"
+    "paymentDislaimer": "# 免責聲明：上述信用卡回贈資料僅供參考，並受相關發卡銀行的推廣條款及細則約束。有關優惠如有更改，恕不另行通知。三星香港對於任何資料不符概不承擔任何責任。務請參閱相關發卡銀行的官方條款及細則以獲取最終詳情。<br>‡ 中銀信用卡 | Samsung 消費獎賞 請<a href=\"https://www.bochk.com/tc/creditcard/promotions/offers/samsung202607.html\" target=\"_blank\">到此登記↗</a>"
   }
 }

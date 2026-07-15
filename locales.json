@@ -123,7 +123,7 @@
     "upgradeDiscounts": "Storage upgrade offer",
     "upgradeDiscountsAvailable": "Storage upgrade offer",
     "viewDetails": "View Details",
-    "paymentDislaimer": "# Disclaimer: The above payment rebate information provided is for reference only and subject to change by the respective banks without prior notice. Samsung Hong Kong bears no responsibility for offer discrepancies. Please refer to the officiall terms and conditions of the corresponding issuing banks for definitive details.<br>‡ Samsung | BOC(HK) Credit Card Rebate Please<a href=\"https://www.bochk.com/en/creditcard/promotions/offers/samsung202607.html\" target=\"_blank\">register here↗</a>"
+    "paymentDislaimer": "# Disclaimer: The above payment rebate information provided is for reference only and subject to change by the respective banks without prior notice. Samsung Hong Kong bears no responsibility for offer discrepancies. Please refer to the officiall terms and conditions of the corresponding issuing banks for definitive details.<br>‡ Samsung | BOC(HK) Credit Card Rebate Please <a href=\"https://www.bochk.com/en/creditcard/promotions/offers/samsung202607.html\" target=\"_blank\">register here↗</a>"
   },
   "zh": {
     "addGift": "加購",

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>F2H26 QHB8 Campaign Page Analytics</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    body { font-family: -apple-system, sans-serif; margin: 30px; background: #f6f8fa; color: #24292e; }
+    .container { max-width: 1250px; margin: 0 auto; background: white; padding: 25px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+    h2 { border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
+    
+    .nav-tabs { display: flex; gap: 10px; border-bottom: 2px solid #e1e4e8; margin-bottom: 20px; }
+    .nav-btn { background: #f6f8fa; border: 1px solid #e1e4e8; border-bottom: none; padding: 10px 20px; font-size: 14px; font-weight: bold; cursor: pointer; border-radius: 6px 6px 0 0; color: #586069; }
+    .nav-btn.active { background: white; color: #0366d6; border-color: #e1e4e8; margin-bottom: -2px; border-top: 3px solid #0366d6; }
+
+    .control-panel { background: #fafbfc; padding: 20px; border: 1px solid #e1e4e8; border-radius: 6px; margin-bottom: 20px; }
+    .filter-group { display: flex; gap: 15px; margin-bottom: 15px; align-items: flex-end; flex-wrap: wrap; }
+    .input-field { display: flex; flex-direction: column; gap: 5px; }
+    .input-field-end { display: flex; justify-content: flex-end; }
+    .checkbox-field { display: flex; align-items: center; gap: 8px; padding-bottom: 10px; cursor: pointer; user-select: none; }
+    
+    .shortcuts-group { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; align-items: center; }
+    .shortcut-btn { background: #e1e4e8; color: #24292e; border: 1px solid #d1d5da; padding: 6px 12px; border-radius: 4px; font-size: 13px; cursor: pointer; font-weight: 500; }
+    .shortcut-btn:hover { background: #d1d5da; }
+    
+    input, select, button { padding: 8px 12px; border: 1px solid #d1d5da; border-radius: 4px; font-size: 14px; background: white; }
+    .btn-primary { background: #2ea44f; color: white; border: none; cursor: pointer; font-weight: bold; padding: 10px 20px; }
+    .btn-primary:hover { background: #2c974b; }
+    
+    .source-toggle { display: flex; background: #e1e4e8; padding: 3px; border-radius: 6px; border: 1px solid #d1d5da; }
+    .source-btn { background: transparent; border: none; padding: 6px 16px; font-size: 13px; font-weight: bold; cursor: pointer; border-radius: 4px; color: #586069; }
+    .source-btn.active { background: white; color: #24292e; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+    .search-matrix { display: flex; gap: 15px; margin-bottom: 20px; background: white; padding: 15px; border: 1px solid #e1e4e8; border-radius: 4px; }
+    .search-matrix .input-field { flex: 1; min-width: 180px; }
+    .search-matrix input { width: 100%; box-sizing: border-box; padding: 10px; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid #e1e4e8; }
+    th { background: #f6f8fa; }
+    .clickable-row { cursor: pointer; transition: background 0.2s; }
+    .clickable-row:hover { background: #f1f8ff; }
+    .drilldown-container { background: #fafbfc; padding: 10px 20px; border-bottom: 1px solid #e1e4e8; display: none; }
+    .drilldown-table { width: 100%; margin: 5px 0 15px 0; font-size: 13px; background: white; border: 1px solid #e1e4e8; }
+    
+    .metric-text { font-size: 14px; font-weight: normal; color: #24292e; }
+    .ctr-high { color: #2ea44f; font-weight: bold; }
+    .badge-source { font-size: 12px; padding: 4px 10px; border-radius: 12px; font-weight: bold; }
+    .badge-sheet { background: #e2f5ea; color: #2ea44f; border: 1px solid #a2e1be; }
+    .badge-supabase { background: #e8f0fe; color: #1a73e8; border: 1px solid #b4d2fe; }
+    .cvr-text { color: #0366d6; font-weight: bold; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!--
+  <div class="nav-tabs">
+    <button id="tabCtrBtn" class="nav-btn active" onclick="switchWorkspaceView('ctr')">📊 CTR Click Logs</button>
+  </div>
+  -->
+
+  <h2>
+    <span id="workspaceTitle">F2H26 QHB8 Campaign Page Analytics</span>
+    <span id="sourceBadge" class="badge-source badge-sheet">Google Sheets Engine</span>
+  </h2>
+  
+  <div class="control-panel">
+    <div class="filter-group">
+      <div class="input-field">
+        <label>Data Engine Source</label>
+        <div class="source-toggle">
+          <button id="srcSheetBtn" class="source-btn active" onclick="setDataSource('sheets')">Google Sheets</button>
+          <button id="srcSupabaseBtn" class="source-btn" onclick="setDataSource('supabase')">Supabase (Today Live)</button>
+        </div>
+      </div>
+      <div class="input-field">
+        <label>Start Date (HKT)</label>
+        <input type="date" id="startDate">
+      </div>
+      <div class="input-field">
+        <label>End Date (HKT)</label>
+        <input type="date" id="endDate">
+      </div>
+      <div class="input-field">
+        <label>Primary Sort Matrix</label>
+        <select id="sortEngine" onchange="renderMetricsTable()">
+          <!-- Populated via JS -->
+        </select>
+      </div>
+      <div class="input-field">
+        <label class="checkbox-field">
+          <input type="checkbox" id="stripParams" onchange="renderMetricsTable()" checked>
+          Aggregate Clean URLs
+        </label>
+      </div>
+    </div>
+
+    <div class="shortcuts-group">
+      <span style="font-size: 13px; font-weight: bold; color: #586069;">Quick Ranges:</span>
+      <button class="shortcut-btn" onclick="applyDateShortcut('today')">Today</button>
+      <button class="shortcut-btn" onclick="applyDateShortcut('yesterday')">Yesterday</button>
+      <button class="shortcut-btn" onclick="applyDateShortcut('last7')">Last 7 Days</button>
+      <button class="shortcut-btn" onclick="applyDateShortcut('thisWeek')">This Week</button>
+      <button class="shortcut-btn" onclick="applyDateShortcut('thisMonth')">This Month</button>
+      <button class="btn-primary" style="margin-left: auto;" onclick="fetchRecordsPipeline()">Fetch Tracker Log</button>
+      <button class="btn-primary" style="background: #0366d6; margin-left: 10px;" onclick="copyTableAsTSV()">Copy as TSV</button>
+    </div>
+
+    <div class="input-field-end">
+      <label class="checkbox-field">
+        <input type="checkbox" id="exportDrilldown">
+        Include Expanded URL Drilldowns in TSV
+      </label>
+    </div>
+  </div>
+
+  <div class="search-matrix">
+    <div class="input-field">
+      <label id="searchLabelMain">Search Data Tracking Value</label>
+      <input type="text" id="searchTrackingVal" oninput="renderMetricsTable()" placeholder="🔍 Search components...">
+    </div>
+    <div class="input-field">
+      <label>Search Clean URL</label>
+      <input type="text" id="searchUrlClean" oninput="renderMetricsTable()" placeholder="🔍 e.g., /checkout">
+    </div>
+    <div class="input-field">
+      <label>Search CID Parameter</label>
+      <input type="text" id="searchCid" oninput="renderMetricsTable()" placeholder="🔍 e.g., hk_promo">
+    </div>
+    <div class="input-field">
+      <label>Search Other Parameters</label>
+      <input type="text" id="searchOtherParams" oninput="renderMetricsTable()" placeholder="🔍 Query strings...">
+    </div>
+  </div>
+
+  <table id="analyticsTable">
+    <thead id="tableHeaderBlock">
+      <!-- Generated contextually -->
+    </thead>
+    <tbody id="mainTableBody">
+      <tr><td colspan="6" style="text-align:center;">Awaiting workspace buffer setup initialization parameters...</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  // --- GOOGLE SHEETS CSV EXPORT DESTINATIONS ---
+  const CLICKS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8Wv_C-lavfXiGP7tU9edvqMPPnGtktPXTZ2Kcy10Im6ET0OI5oGqtWOM7wT6BychP_-BS31kspyNg/pub?gid=0&single=true&output=csv';
+  const IMPRESSIONS_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ8Wv_C-lavfXiGP7tU9edvqMPPnGtktPXTZ2Kcy10Im6ET0OI5oGqtWOM7wT6BychP_-BS31kspyNg/pub?gid=1195359488&single=true&output=csv';
+
+  // --- SUPABASE ACCESS CONFIGURATIONS ---
+  const SUPABASE_URL = 'https://rqdmrmkiuvecwnbtisfn.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_6fTm2KX3PJqvE5TI5baiYQ_FICRZOLC';
+
+  let supabaseClient = null;
+  if(SUPABASE_URL !== 'https://YOUR_PROJECT_ID.supabase.co') {
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  }
+
+  let activeWorkspace = 'ctr'; 
+  let currentDataSource = 'sheets'; 
+  
+  let cachedClicks = [];
+  let cachedImpressions = [];
+
+  function getHKTDateString(date) {
+    const formatter = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit' });
+    return formatter.format(date);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+    const yesterdayStr = getHKTDateString(yesterday);
+    document.getElementById('startDate').value = yesterdayStr;
+    document.getElementById('endDate').value = yesterdayStr;
+    
+    updateSortDropdownInterface();
+    fetchRecordsPipeline();
+  });
+
+  function switchWorkspaceView(viewMode) {
+    activeWorkspace = viewMode;
+    document.getElementById('tabCtrBtn').classList.toggle('active', viewMode === 'ctr');
+    document.getElementById('workspaceTitle').innerText = "Click & CTR Performance Panel";
+    document.getElementById('searchLabelMain').innerText = "Search Data Tracking Value";
+    
+    updateSortDropdownInterface();
+    renderMetricsTable();
+  }
+
+  function updateSortDropdownInterface() {
+    const sortDropdown = document.getElementById('sortEngine');
+    sortDropdown.innerHTML = `
+      <option value="clicks_desc" selected>Most Clicks → Least Clicks</option>
+      <option value="ctr_desc">Highest CTR% → Lowest CTR%</option>
+      <option value="alpha_asc">Tracker Value (A-Z)</option>
+    `;
+  }
+
+  function setDataSource(source) {
+    currentDataSource = source;
+    const badge = document.getElementById('sourceBadge');
+    document.getElementById('srcSheetBtn').classList.toggle('active', source === 'sheets');
+    document.getElementById('srcSupabaseBtn').classList.toggle('active', source === 'supabase');
+    badge.innerText = source === 'sheets' ? "Google Sheets Engine" : "Supabase Live Instance";
+    badge.className = `badge-source ${source === 'sheets' ? 'badge-sheet' : 'badge-supabase'}`;
+    fetchRecordsPipeline();
+  }
+
+  function applyDateShortcut(rangeType) {
+    const now = new Date(); let start = new Date(); let end = new Date();
+    switch(rangeType) {
+      case 'today': break;
+      case 'yesterday': start.setDate(now.getDate() - 1); end.setDate(now.getDate() - 1); break;
+      case 'last7': start.setDate(now.getDate() - 7); break;
+      case 'thisWeek':
+        const currentDay = now.getDay();
+        const distanceToMonday = currentDay === 0 ? 6 : currentDay - 1;
+        start.setDate(now.getDate() - distanceToMonday);
+        break;
+      case 'thisMonth': start = new Date(now.getFullYear(), now.getMonth(), 1); break;
+    }
+    document.getElementById('startDate').value = getHKTDateString(start);
+    document.getElementById('endDate').value = getHKTDateString(end);
+    fetchRecordsPipeline();
+  }
+
+  function parseCSVText(text) {
+    const lines = []; let row = [""]; let inQuotes = false;
+    for (let i = 0; i < text.length; i++) {
+      let c = text[i]; let next = text[i+1];
+      if (c === '"') { if (inQuotes && next === '"') { row[row.length - 1] += '"'; i++; } else { inQuotes = !inQuotes; } }
+      else if (c === ',' && !inQuotes) { row.push(''); }
+      else if ((c === '\r' || c === '\n') && !inQuotes) {
+        if (c === '\r' && next === '\n') { i++; }
+        if (row.length > 1 || row[0] !== '') lines.push(row); row = [''];
+      } else { row[row.length - 1] += c; }
+    }
+    if (row.length > 1 || row[0] !== '') lines.push(row); return lines;
+  }
+
+  async function fetchRecordsPipeline() {
+    document.getElementById('mainTableBody').innerHTML = '<tr><td colspan="6" style="text-align:center;">Synchronizing active data fields...</td></tr>';
+
+    try {
+      if (currentDataSource === 'sheets') {
+        await fetchFromGoogleSheets();
+      } else {
+        await fetchFromSupabaseLive();
+      }
+
+      renderMetricsTable();
+    } catch (e) {
+      console.error("Pipeline compiling matrix unaligned:", e);
+      document.getElementById('mainTableBody').innerHTML = `<tr><td colspan="6" style="text-align:center; color:red;">Pipeline Error: ${e.message}</td></tr>`;
+    }
+  }
+
+  async function fetchFromGoogleSheets() {
+    try {
+      const [clicksRes, impRes] = await Promise.all([
+        fetch(CLICKS_CSV_URL).then(r => r.text()),
+        fetch(IMPRESSIONS_CSV_URL).then(r => r.text())
+      ]);
+
+      const clickRows = parseCSVText(clicksRes);
+      cachedClicks = [];
+      for(let i = 1; i < clickRows.length; i++) { 
+        const r = clickRows[i]; if(r.length >= 3) cachedClicks.push({ timestamp: r[0], tracking_value: r[1], url_clean: r[2], cid: r[3], other_params: r[4] }); 
+      }
+
+      const impRows = parseCSVText(impRes);
+      cachedImpressions = [];
+      for(let i = 1; i < impRows.length; i++) { 
+        const r = impRows[i]; if(r.length >= 3) cachedImpressions.push({ timestamp: r[0], tracking_value: r[1], url_clean: r[2], cid: r[3], other_params: r[4] }); 
+      }
+
+      renderMetricsTable();
+    } catch (e) {
+      alert("Error parsing runtime arrays from Google Sheets: " + e.message);
+    }
+  }
+
+  async function fetchFromSupabaseLive() {
+    if(!supabaseClient) { alert("Please input valid Supabase access configurations first."); return; }
+    const startInput = document.getElementById('startDate').value;
+    const endInput = document.getElementById('endDate').value;
+    const startISO = new Date(`${startInput}T00:00:00+08:00`).toISOString();
+    const endISO = new Date(`${endInput}T23:59:59+08:00`).toISOString();
+
+    const [ctrRes] = await Promise.all([
+      supabaseClient.from('ctr_analytics').select('timestamp, tracking_value, url_clean, cid, other_params, event_type').gte('timestamp', startISO).lte('timestamp', endISO)
+    ]);
+
+    if (ctrRes.error) { 
+      alert('Query execution mapping exception error: ' + ctrRes.error?.message); 
+      return; 
+    }
+
+    cachedClicks = ctrRes.data.filter(r => r.event_type === 'click');
+    cachedImpressions = ctrRes.data.filter(r => r.event_type === 'impression');
+
+    renderMetricsTable();
+  }
+
+  function renderMetricsTable() {
+    const tbody = document.getElementById('mainTableBody');
+    const thead = document.getElementById('tableHeaderBlock');
+    tbody.innerHTML = '';
+
+    const sortStrategy = document.getElementById('sortEngine').value;
+    const shouldStripParams = document.getElementById('stripParams').checked;
+
+    const filterMain = document.getElementById('searchTrackingVal').value.trim().toLowerCase();
+    const filterUrl = document.getElementById('searchUrlClean').value.trim().toLowerCase();
+    const filterCid = document.getElementById('searchCid').value.trim().toLowerCase();
+    const filterOther = document.getElementById('searchOtherParams').value.trim().toLowerCase();
+
+    const startBounds = new Date(`${document.getElementById('startDate').value}T00:00:00+08:00`);
+    const endBounds = new Date(`${document.getElementById('endDate').value}T23:59:59+08:00`);
+
+    thead.innerHTML = `<tr><th>Data Tracking Value</th><th>Impressions</th><th id="totalVolumeHeader">Clicks</th><th>CTR %</th></tr>`;
+    
+    // Count total page impressions where tracking_value is case-insensitively "loaded" within the current range criteria
+    let totalLoadedImpressions = 0;
+    cachedImpressions.forEach(row => {
+      if (currentDataSource === 'sheets') {
+        const d = new Date(row.timestamp); if (d < startBounds || d > endBounds) return;
+      }
+      if ((row.tracking_value || '').toLowerCase() === 'loaded') {
+        if (filterUrl && !(row.url_clean || '').toLowerCase().includes(filterUrl)) return;
+        if (filterCid && !(row.cid || '').toLowerCase().includes(filterCid)) return;
+        if (filterOther && !(row.other_params || '').toLowerCase().includes(filterOther)) return;
+        totalLoadedImpressions++;
+      }
+    });
+
+    const aggregation = {};
+    let totalClicksSum = 0;
+
+    cachedClicks.forEach(row => {
+      if (currentDataSource === 'sheets') {
+        const d = new Date(row.timestamp); if (d < startBounds || d > endBounds) return;
+      }
+      const val = row.tracking_value || '';
+      if (filterMain && !val.toLowerCase().includes(filterMain)) return;
+      if (filterUrl && !(row.url_clean || '').toLowerCase().includes(filterUrl)) return;
+      if (filterCid && !(row.cid || '').toLowerCase().includes(filterCid)) return;
+      if (filterOther && !(row.other_params || '').toLowerCase().includes(filterOther)) return;
+
+      const baseTrackedUrl = row.url_clean || 'unknown';
+      const url = shouldStripParams ? baseTrackedUrl : (baseTrackedUrl + (row.cid ? '?cid=' + row.cid : '') + (row.other_params ? '&' + row.other_params : ''));
+
+      if (!aggregation[val]) aggregation[val] = { clicks: 0, impressions: totalLoadedImpressions, urls: {} };
+      if (!aggregation[val].urls[url]) aggregation[val].urls[url] = { clicks: 0, impressions: totalLoadedImpressions };
+
+      aggregation[val].clicks++;
+      aggregation[val].urls[url].clicks++;
+      totalClicksSum++;
+    });
+
+    document.getElementById('totalVolumeHeader').innerText = `Clicks (Sum: ${totalClicksSum})`;
+
+    let entries = Object.entries(aggregation).map(([key, meta]) => {
+      const ctr = meta.impressions > 0 ? ((meta.clicks / meta.impressions) * 100).toFixed(2) : '0.00';
+      return [key, { ...meta, rate: parseFloat(ctr) }];
+    });
+
+    if (sortStrategy === 'clicks_desc') entries.sort((a, b) => b[1].clicks - a[1].clicks);
+    else if (sortStrategy === 'ctr_desc') entries.sort((a, b) => b[1].rate - a[1].rate);
+    else if (sortStrategy === 'alpha_asc') entries.sort((a, b) => a[0].localeCompare(b[0]));
+
+    entries.forEach(([trackingValue, meta], index) => {
+      let urlEntries = Object.entries(meta.urls).map(([url, uMeta]) => {
+        const uCtr = uMeta.impressions > 0 ? ((uMeta.clicks / uMeta.impressions) * 100).toFixed(2) : '0.00';
+        return [url, { ...uMeta, rate: parseFloat(uCtr) }];
+      }).sort((a, b) => b[1].clicks - a[1].clicks);
+
+      const mainRow = `
+        <tr class="clickable-row" onclick="toggleDrilldown(${index})">
+          <td><strong>📁 ${trackingValue}</strong></td>
+          <td class="metric-text">${meta.impressions}</td>
+          <td class="metric-text">${meta.clicks}</td>
+          <td class="metric-text ${meta.rate > 5 ? 'ctr-high' : ''}">${meta.rate}%</td>
+        </tr>
+      `;
+
+      let subRowsHtml = '';
+      urlEntries.forEach(([url, uMeta]) => {
+        subRowsHtml += `<tr><td><a href="${url}" target="_blank" style="color: #0366d6; word-break: break-all;">${url}</a></td><td>${uMeta.impressions}</td><td>${uMeta.clicks}</td><td><span class="${uMeta.rate > 5 ? 'ctr-high' : ''}">${uMeta.rate}%</span></td></tr>`;
+      });
+
+      tbody.innerHTML += mainRow + `<tr id="drilldown-${index}" class="drilldown-container"><td colspan="4"><table class="drilldown-table"><thead><tr><th>Source Target URL</th><th>Impressions</th><th>Clicks</th><th>CTR %</th></tr></thead><tbody>${subRowsHtml}</tbody></table></td></tr>`;
+    });
+  }
+
+  function toggleDrilldown(index) {
+    const el = document.getElementById(`drilldown-${index}`);
+    el.style.display = (el.style.display === 'table-row') ? 'none' : 'table-row';
+  }
+
+  function copyTableAsTSV() {
+    const table = document.getElementById('analyticsTable'); 
+    if (!table) return;
+    
+    const shouldExportDrilldown = document.getElementById('exportDrilldown').checked;
+    let tsv = ""; 
+
+    let headerRow = ["Data Tracking Value", "Impressions", "Clicks", "CTR %"];
+    
+    if (shouldExportDrilldown) {
+      headerRow.push("Source Target URL", "Sub-Impressions", "Sub-Clicks", "Sub-CTR %");
+    }
+    tsv += headerRow.join("\t") + "\n";
+
+    const primaryRows = Array.from(table.querySelectorAll('tbody > tr:not(.drilldown-container)'));
+    
+    primaryRows.forEach(r => {
+      const tds = r.querySelectorAll('td');
+      if (tds.length === 0) return;
+      
+      let primaryData = [];
+      
+      tds.forEach(c => {
+        let cellText = "";
+        c.childNodes.forEach(node => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            cellText += node.nodeValue;
+          } else if (node.nodeType === Node.ELEMENT_NODE && !['TABLE', 'TR', 'TD', 'THEAD', 'TBODY'].includes(node.tagName)) {
+            cellText += node.innerText;
+          }
+        });
+        
+        cellText = cellText.replace(/\r?\n|\r/g, " ").trim();
+        cellText = cellText.replace(/^[\u2600-\u27BF\uE000-\uF8FF\uD83C-\uDBFF\uDC00-\uDFFF\u2000-\u2BFF\s]+/, '').trim();
+        primaryData.push(cellText);
+      });
+
+      if (shouldExportDrilldown) {
+        const nextRow = r.nextElementSibling;
+        if (nextRow && nextRow.classList.contains('drilldown-container')) {
+          const subRows = nextRow.querySelectorAll('.drilldown-table tbody tr');
+          subRows.forEach(subRow => {
+            const subTds = subRow.querySelectorAll('td');
+            let subRowData = [];
+            
+            subTds.forEach(subTd => {
+              subRowData.push(subTd.innerText.replace(/\r?\n|\r/g, " ").trim());
+            });
+            
+            let combinedRow = primaryData.concat(subRowData);
+            tsv += combinedRow.join("\t") + "\n";
+          });
+        } else {
+          let emptyPadding = ["", "", "", ""];
+          tsv += primaryData.concat(emptyPadding).join("\t") + "\n";
+        }
+      } else {
+        tsv += primaryData.join("\t") + "\n";
+      }
+    });
+
+    navigator.clipboard.writeText(tsv).then(() => {
+      alert("Workspace table metrics compiled and copied to clipboard as clean TSV!");
+    }).catch(e => console.error("Clipboard write blocked:", e));
+  }
+</script>
+</body>
+</html>

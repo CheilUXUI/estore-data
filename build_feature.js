@@ -42,7 +42,7 @@ https.get(URL, (res) => {
         };
       });
 
-      fs.writeFileSync('output.json', JSON.stringify(result, null, 2));
+      fs.writeFileSync('feature.json', JSON.stringify(result, null, 2));
     } catch (error) {
       console.error(error.message);
     }

@@ -24,7 +24,7 @@ https.get(URL, (res) => {
       const jsonEnd = data.lastIndexOf('}');
       const jsonData = JSON.parse(data.substring(jsonStart, jsonEnd + 1));
       
-      const rows = jsonData.table.rows;
+      const rows = jsonData.table.rows.slice(1);
       const result = rows.map(row => {
         const rawObj = {};
         row.c.forEach((cell, index) => {

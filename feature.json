@@ -1,0 +1,83 @@
+[
+  {
+    "family": "q8",
+    "device": "Galaxy Z Fold8 Ultra",
+    "features": {
+      "feature1_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/screen.png",
+      "feature2_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/camera.png",
+      "feature3_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/battery.png",
+      "feature1h_tc": "極大屏幕",
+      "feature1d_tc": "主屏幕<br>展開 8”",
+      "feature1s_tc": "8” 極大主屏幕",
+      "feature2h_tc": "專業規格",
+      "feature2d_tc": "主鏡頭：200, 50, 10 MP<br>前置鏡頭：10 MP",
+      "feature2s_tc": "專業規格主鏡頭 200, 50, 10 MP",
+      "feature3h_tc": "持久續航力\r",
+      "feature3d_tc": "電池 5000 mAh<br>27 小時播放時間",
+      "feature3s_tc": "5000mAh電池 27小時播放時間",
+      "feature1h_en": "Ultimate large screen ",
+      "feature1d_en": "Main screen<br>8.0” unfolded",
+      "feature1s_en": "8\" Ultimate large screen ",
+      "feature2h_en": "Pro-grade detail",
+      "feature2d_en": "Rear: 200, 50, 10 MP<br>Front: 10MP (Cover, Main) ",
+      "feature2s_en": "Pro-grade camera: 200, 50, 10 MP",
+      "feature3h_en": "Long-lasting power",
+      "feature3d_en": "Battery 5000mAh<br>27hrs playing",
+      "feature3s_en": "Battery 5000mAh 27hrs playing"
+    }
+  },
+  {
+    "family": "h8",
+    "device": "Galaxy Z Fold8",
+    "features": {
+      "feature1_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/screen.png",
+      "feature2_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/thinness.png",
+      "feature3_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/battery.png",
+      "feature1h_tc": "沉浸大屏幕",
+      "feature1d_tc": "主屏幕<br>展開 7.6”",
+      "feature1s_tc": "7.6” 沉浸大屏幕",
+      "feature2h_tc": "輕巧纖薄",
+      "feature2d_tc": "厚度：4.5 mm<br>重量：201 克",
+      "feature2s_tc": "輕巧纖薄 重量 201克",
+      "feature3h_tc": "持久續航力\r",
+      "feature3d_tc": "電池 4800 mAh<br>26 小時播放時間",
+      "feature3s_tc": "4800mAh電池 26小時播放時間",
+      "feature1h_en": "Wide view immersive",
+      "feature1d_en": "Main screen<br>7.6\" Unfolded",
+      "feature1s_en": "7.6\" Wide view immersive",
+      "feature2h_en": "Thinness & Lightness",
+      "feature2d_en": "Thickness : 4.5 mm, Weight : 201 g",
+      "feature2s_en": "Thin & Light: just 201g",
+      "feature3h_en": "Long-lasting power",
+      "feature3d_en": "Battery 4800mAh<br>26hrs playing",
+      "feature3s_en": "Battery 4800mAh 26hrs playing"
+    }
+  },
+  {
+    "family": "b8",
+    "device": "Galaxy Z Flip8",
+    "features": {
+      "feature1_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/pocket.png",
+      "feature2_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/flip.png",
+      "feature3_img": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/battery.png",
+      "feature1h_tc": "摺埋 啱啱好",
+      "feature1d_tc": "厚度：6.1mm<br>重量：180克",
+      "feature1s_tc": "摺埋 啱啱好 重量180克",
+      "feature2h_tc": "自拍定合照<br>放手即影",
+      "feature2d_tc": "主鏡頭：50, 12 MP<br>前置鏡頭：10 MP",
+      "feature2s_tc": "放手即影主鏡頭：50, 12 MP",
+      "feature3h_tc": "持久續航力\r",
+      "feature3d_tc": "電池 4300 mAh<br>31 小時播放時間",
+      "feature3s_tc": "4300mAh電池 31小時播放時間",
+      "feature1h_en": "Flip it, Pocket it",
+      "feature1d_en": "Thickness : 6.1mm, Weight : 180g",
+      "feature1s_en": "Flip it, Pocket it just 180g",
+      "feature2h_en": "Solo or squad, Hands-free",
+      "feature2d_en": "FlexCam: 50, 12 MP<br>Front : 10 MP",
+      "feature2s_en": "FlexCam: 50, 12 MP",
+      "feature3h_en": "Long-lasting power",
+      "feature3d_en": "Battery 4300mAh<br>31hrs playing",
+      "feature3s_en": "Battery 4300mAh 31hrs playing"
+    }
+  }
+]

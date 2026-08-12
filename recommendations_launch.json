@@ -1,7 +1,6 @@
 {
   "products": [
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-600623-sm-f9760dgptgy-thumb-553869325",
@@ -20,7 +19,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zkptgy-thumb-553869124",
@@ -39,7 +37,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zvptgy-thumb-553869186",
@@ -58,7 +55,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zwotgy-thumb-553869224",
@@ -77,7 +73,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zkotgy-thumb-553869096",
@@ -96,7 +91,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zvotgy-thumb-553869163",
@@ -115,7 +109,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-600623-sm-f9760dgotgy-thumb-553869306",
@@ -134,7 +127,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zwitgy-thumb-553869205",
@@ -153,7 +145,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zkitgy-thumb-553869075",
@@ -172,7 +163,6 @@
       "gifts": []
     },
     {
-      "family": "q8",
       "model": "Galaxy Z Fold8 Ultra",
       "baseCode": "SM-F9760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-sm-f9760zvitgy-thumb-553869144",
@@ -191,7 +181,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-600626-sm-f9710zgptgy-thumb-553869609",
@@ -210,7 +199,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710zkptgy-thumb-553869518",
@@ -229,7 +217,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710lvptgy-thumb-553869469",
@@ -248,7 +235,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710zwotgy-thumb-553869548",
@@ -267,7 +253,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710zkotgy-thumb-553869499",
@@ -286,7 +271,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710lvotgy-thumb-553869454",
@@ -305,7 +289,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-600626-sm-f9710zgotgy-thumb-553869594",
@@ -324,7 +307,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710zwitgy-thumb-553869533",
@@ -343,7 +325,6 @@
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710zkitgy-thumb-553869484",
@@ -356,13 +337,12 @@
       "sku": "SM-F9710ZKITGY",
       "rrp": 14398,
       "lsvDiscount": 0,
-      "InStockStatus": "Y",
+      "InStockStatus": "N",
       "oosLink": "https://www.samsung.com/hk/smartphones/galaxy-z-fold8/buy/?modelCode=SM-F9710ZKITGY",
       "oosLinkEn": "https://www.samsung.com/hk_en/smartphones/galaxy-z-fold8/buy/?modelCode=SM-F9710ZKITGY",
       "gifts": []
     },
     {
-      "family": "h8",
       "model": "Galaxy Z Fold8",
       "baseCode": "SM-F9710",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-sm-f9710lvitgy-thumb-553869439",
@@ -381,7 +361,6 @@
       "gifts": []
     },
     {
-      "family": "b8",
       "model": "Galaxy Z Flip8",
       "baseCode": "SM-F7760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-600629-sm-f7760lgptgy-thumb-553869855",
@@ -400,7 +379,6 @@
       "gifts": []
     },
     {
-      "family": "b8",
       "model": "Galaxy Z Flip8",
       "baseCode": "SM-F7760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-sm-f7760zkptgy-thumb-553869710",
@@ -419,7 +397,6 @@
       "gifts": []
     },
     {
-      "family": "b8",
       "model": "Galaxy Z Flip8",
       "baseCode": "SM-F7760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-sm-f7760liptgy-thumb-553869668",
@@ -438,7 +415,6 @@
       "gifts": []
     },
     {
-      "family": "b8",
       "model": "Galaxy Z Flip8",
       "baseCode": "SM-F7760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-sm-f7760zwotgy-thumb-553869731",
@@ -457,7 +433,6 @@
       "gifts": []
     },
     {
-      "family": "b8",
       "model": "Galaxy Z Flip8",
       "baseCode": "SM-F7760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-sm-f7760zkotgy-thumb-553869689",
@@ -476,7 +451,6 @@
       "gifts": []
     },
     {
-      "family": "b8",
       "model": "Galaxy Z Flip8",
       "baseCode": "SM-F7760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-sm-f7760liotgy-thumb-553869647",
@@ -495,7 +469,6 @@
       "gifts": []
     },
     {
-      "family": "b8",
       "model": "Galaxy Z Flip8",
       "baseCode": "SM-F7760",
       "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-600629-sm-f7760lgotgy-thumb-553869829",

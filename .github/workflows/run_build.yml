@@ -19,13 +19,24 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Install Dependencies
+      - name: Install Root Dependencies
         run: npm install
+
+      - name: Install v2 Dependencies
+        run: |
+          if [ -d "v2" ] && [ -f "v2/package.json" ]; then
+            cd v2 && npm install
+          fi
 
       - name: Run Build Script
         env:
           SCRIPT_NAME: ${{ github.event.client_payload.script }}
-        run: node "$SCRIPT_NAME"
+        run: |
+          if [ -f "v2/$SCRIPT_NAME" ]; then
+            cd v2 && node "$SCRIPT_NAME"
+          else
+            node "$SCRIPT_NAME"
+          fi
 
       - name: Commit and Push Changes
         run: |

@@ -35,8 +35,8 @@
     "maximum": 2000,
     "fixedDiscount": {
       "name": {
-        "en": "Samsung | DBS Credit Card Shopping Rewards (Registration Required)<sup>‡</sup> up to",
-        "zh": "DBS Compass Visa 經 AliPayHK/ WeChat Pay 簽賬3% DBS$ 回贈  (須登記)<sup>‡</sup> 高達"
+        "en": "DBS Compass Visa via AliPayHK/ WeChat Pay 3% DBS$ rebate (Registration Required)<sup>‡</sup> up to",
+        "zh": "DBS Compass Visa 經 AliPayHK/ WeChat Pay 簽賬3% DBS$ 回贈  (須登記)<sup>‡</sup> 高達"
       },
       "value": 200
     },

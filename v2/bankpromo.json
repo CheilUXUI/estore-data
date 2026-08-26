@@ -16,27 +16,31 @@
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-dbs.png",
     "tiers": [
       {
-        "min": 3000,
+        "max": 3000,
+        "discount": null
+      },
+      {
+        "max": 6000,
         "discount": 120
       },
       {
-        "min": 6000,
+        "max": 10000,
         "discount": 300
       },
       {
-        "min": 10000,
+        "max": 15000,
         "discount": 600
       },
       {
-        "min": 15000,
+        "max": 99999999,
         "discount": 1000
       }
     ],
     "maximum": 2000,
     "fixedDiscount": {
       "name": {
-        "en": "Samsung | DBS Credit Card Shopping Rewards (Registration Required)<sup>‡</sup> up to",
-        "zh": "DBS Compass Visa 經 AliPayHK/ WeChat Pay 簽賬3% DBS$ 回贈  (須登記)<sup>‡</sup> 高達"
+        "en": "DBS Compass Visa via AliPayHK/ WeChat Pay 3% DBS$ rebate (Registration Required)<sup>‡</sup> up to",
+        "zh": "DBS Compass Visa 經 AliPayHK/ WeChat Pay 簽賬3% DBS$ 回贈  (須登記)<sup>‡</sup> 高達"
       },
       "value": 200
     },
@@ -60,8 +64,8 @@
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-hsbc.png",
     "tiers": [
       {
-        "min": 99999999,
-        "discount": 0
+        "max": 99999999,
+        "discount": null
       }
     ],
     "maximum": 0,
@@ -92,8 +96,8 @@
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-hsb.png",
     "tiers": [
       {
-        "min": 99999999,
-        "discount": 0
+        "max": 99999999,
+        "discount": null
       }
     ],
     "maximum": 0,
@@ -124,8 +128,8 @@
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-aeon.png",
     "tiers": [
       {
-        "min": 99999999,
-        "discount": 0
+        "max": 99999999,
+        "discount": null
       }
     ],
     "maximum": 0,

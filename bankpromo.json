@@ -1,42 +1,42 @@
 [
   {
-    "key": "bankofchina(hk)creditcard",
+    "key": "dbscreditcard",
     "name": {
-      "en": "Bank of China (HK) Credit Card",
-      "zh": "中銀香港信用卡"
+      "en": "DBS Credit Card",
+      "zh": "DBS信用卡"
     },
     "max": {
       "en": "Max. $2,200 Rebate",
       "zh": "高達$2,200獎賞"
     },
     "rebateName": {
-      "en": "Samsung | BOC(HK) Credit Card Rebate (Registration Required)<sup>‡</sup>",
-      "zh": "中銀信用卡 | Samsung 消費獎賞 (須登記)<sup>‡</sup>"
+      "en": "Samsung | DBS Credit Card Shopping Rewards",
+      "zh": "Samsung | DBS 購物激賞"
     },
-    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-bochk.png",
+    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-dbs.png",
     "tiers": [
       {
         "max": 3000,
-        "percent": 0
+        "percent": null
+      },
+      {
+        "max": 6000,
+        "percent": null
       },
       {
         "max": 10000,
-        "percent": 0.04
+        "percent": null
       },
       {
         "max": 15000,
-        "percent": 0.05
-      },
-      {
-        "max": 99999999,
-        "percent": 0.06
+        "percent": null
       }
     ],
     "maximum": 2000,
     "fixedDiscount": {
       "name": {
-        "en": "BOC Visa Credit Card 'Amazing Local Rewards' 'Holidays' 5% Rebate<sup>#</sup> up to",
-        "zh": "中銀Visa信用卡「狂賞派」「紅日」額外5%回贈<sup>#</sup> 高達"
+        "en": "Samsung | DBS Credit Card Shopping Rewards (Registration Required)<sup>‡</sup> up to",
+        "zh": "DBS Compass Visa 經 AliPayHK/ WeChat Pay 簽賬3% DBS$ 回贈  (須登記)<sup>‡</sup> 高達"
       },
       "value": 200
     },
@@ -61,7 +61,7 @@
     "tiers": [
       {
         "max": 99999999,
-        "percent": 0
+        "percent": null
       }
     ],
     "maximum": 0,
@@ -93,7 +93,7 @@
     "tiers": [
       {
         "max": 99999999,
-        "percent": 0
+        "percent": null
       }
     ],
     "maximum": 0,
@@ -125,7 +125,7 @@
     "tiers": [
       {
         "max": 99999999,
-        "percent": 0
+        "percent": null
       }
     ],
     "maximum": 0,

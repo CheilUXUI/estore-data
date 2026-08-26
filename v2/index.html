@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F2H26 QHB Campaign Page Helper - Trigger JSON Builds V2</title>
+    <meta name="googlebot" content="noindex, nofollow" />
+    <style>
+        body { font-family: -apple-system, sans-serif; margin: 30px; background: #f6f8fa; color: #24292e; }
+        .container { max-width: 1250px; margin: 0 auto; background: white; padding: 25px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>F2H26 QHB Campaign Page Helper - Trigger JSON Builds</h1>
+    
+    <label for="token">GitHub Personal Access Token:</label>
+    <input type="password" id="token" placeholder="ghp_xxxx..." /><br><br>
+
+    <div style="display: flex; flex-direction: column; gap: 12px">
+        <div><button onclick="triggerBuild('build_recommendations_launch.js')">1. Build New Device (launch)</button></div>
+        <div><button onclick="triggerBuild('build_recommendations.js')">1. Build New Device (pre-order phase)</button></div>
+        <div><button onclick="triggerBuild('build_recommendations_ignore_real_stock.js')">1. Build New Device (pre-order phase - ignore real stock checking)</button></div>
+        <div><button onclick="triggerBuild('build_step1models.js')">2. Build Step 1 Options</button></div>
+        <div><button onclick="triggerBuild('build_devices.js')">3. Build Trade-in Options</button></div>
+        <div><button onclick="triggerBuild('build_bankpromo.js')">4. Build Bank Pro Options</button></div>
+        <div><button onclick="triggerBuild('build_gifts.js')">5. Build Gift Options</button></div>
+        <div><button onclick="triggerBuild('build_locales.js')">6. Build Locales</button></div>
+        <div><button onclick="triggerBuild('build_feature.js')">7. Build Feature</button></div>
+        
+        <div><a href="https://drive.google.com/drive/folders/1eJu94b9BjlVMmegTjHMkdSAX34ejd60G?ths=true" target="_blank">Go to Google Sheet</a></div>
+        <div><a href="https://github.com/CheilUXUI/estore-data/actions" target="_blank">GitHub Actions tab</a></div>
+        <div><a href="tracking.html" target="_blank">Tracking page</a></div>
+    </div>
+    
+    <p id="status"></p>
+</div>
+
+    <script>
+        async function triggerBuild(scriptName) {
+            const token = document.getElementById('token').value;
+            const statusEl = document.getElementById('status');
+            
+            if (!token) {
+                alert('Please enter your GitHub Personal Access Token.');
+                return;
+            }
+
+            statusEl.innerText = `Triggering ${scriptName}...`;
+
+            // Replace with your GitHub Username and Repository Name
+            const OWNER = 'CheilUXUI';
+            const REPO = 'estore-data';
+
+            try {
+                const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/dispatches`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        event_type: 'run-build',
+                        client_payload: {
+                            script: scriptName
+                        }
+                    })
+                });
+
+                if (response.status === 204) {
+                    statusEl.innerText = `Success! ${scriptName} triggered. Check the GitHub Actions Tab.`;
+                } else {
+                    const errData = await response.json();
+                    statusEl.innerText = `Failed: ${errData.message}`;
+                }
+            } catch (error) {
+                statusEl.innerText = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

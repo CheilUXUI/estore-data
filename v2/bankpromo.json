@@ -1,42 +1,42 @@
 [
   {
-    "key": "bankofchina(hk)creditcard",
+    "key": "dbscreditcard",
     "name": {
-      "en": "Bank of China (HK) Credit Card",
-      "zh": "中銀香港信用卡"
+      "en": "DBS Credit Card",
+      "zh": "DBS信用卡"
     },
     "max": {
       "en": "Max. $2,200 Rebate",
       "zh": "高達$2,200獎賞"
     },
     "rebateName": {
-      "en": "Samsung | BOC(HK) Credit Card Rebate (Registration Required)<sup>‡</sup>",
-      "zh": "中銀信用卡 | Samsung 消費獎賞 (須登記)<sup>‡</sup>"
+      "en": "Samsung | DBS Credit Card Shopping Rewards",
+      "zh": "Samsung | DBS 購物激賞"
     },
-    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-bochk.png",
+    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-dbs.png",
     "tiers": [
       {
-        "max": 3000,
-        "percent": 0
+        "min": 3000,
+        "discount": 120
       },
       {
-        "max": 10000,
-        "percent": 0.04
+        "min": 6000,
+        "discount": 300
       },
       {
-        "max": 15000,
-        "percent": 0.05
+        "min": 10000,
+        "discount": 600
       },
       {
-        "max": 99999999,
-        "percent": 0.06
+        "min": 15000,
+        "discount": 1000
       }
     ],
     "maximum": 2000,
     "fixedDiscount": {
       "name": {
-        "en": "BOC Visa Credit Card 'Amazing Local Rewards' 'Holidays' 5% Rebate<sup>#</sup> up to",
-        "zh": "中銀Visa信用卡「狂賞派」「紅日」額外5%回贈<sup>#</sup> 高達"
+        "en": "Samsung | DBS Credit Card Shopping Rewards (Registration Required)<sup>‡</sup> up to",
+        "zh": "DBS Compass Visa 經 AliPayHK/ WeChat Pay 簽賬3% DBS$ 回贈  (須登記)<sup>‡</sup> 高達"
       },
       "value": 200
     },
@@ -60,8 +60,8 @@
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-hsbc.png",
     "tiers": [
       {
-        "max": 99999999,
-        "percent": 0
+        "min": 99999999,
+        "discount": 0
       }
     ],
     "maximum": 0,
@@ -92,8 +92,8 @@
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-hsb.png",
     "tiers": [
       {
-        "max": 99999999,
-        "percent": 0
+        "min": 99999999,
+        "discount": 0
       }
     ],
     "maximum": 0,
@@ -124,8 +124,8 @@
     "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-aeon.png",
     "tiers": [
       {
-        "max": 99999999,
-        "percent": 0
+        "min": 99999999,
+        "discount": 0
       }
     ],
     "maximum": 0,

@@ -17,7 +17,7 @@
     "tiers": [
       {
         "max": 3000,
-        "discount": null
+        "discount": 0
       },
       {
         "max": 6000,
@@ -65,7 +65,7 @@
     "tiers": [
       {
         "max": 99999999,
-        "discount": null
+        "discount": 0
       }
     ],
     "maximum": 0,
@@ -97,7 +97,7 @@
     "tiers": [
       {
         "max": 99999999,
-        "discount": null
+        "discount": 0
       }
     ],
     "maximum": 0,
@@ -129,7 +129,7 @@
     "tiers": [
       {
         "max": 99999999,
-        "discount": null
+        "discount": 0
       }
     ],
     "maximum": 0,

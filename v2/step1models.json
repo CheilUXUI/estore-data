@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Galaxy Z Fold8 Ultra",
+    "family": "q8",
+    "baseCode": "SM-F9760",
+    "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-ultra-f976-600623-sm-f9760dgptgy-thumb-553869325",
+    "storageOptions": [
+      {
+        "storage": "1TB | 16GB",
+        "price": 20798,
+        "colors": [
+          {
+            "name": "Green Shadow",
+            "sku": "SM-F9760DGPTGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F9760ZKPTGY"
+          },
+          {
+            "name": "Violet Shadow",
+            "sku": "SM-F9760ZVPTGY"
+          }
+        ]
+      },
+      {
+        "storage": "512GB | 12GB",
+        "price": 17598,
+        "colors": [
+          {
+            "name": "Cream",
+            "sku": "SM-F9760ZWOTGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F9760ZKOTGY"
+          },
+          {
+            "name": "Violet Shadow",
+            "sku": "SM-F9760ZVOTGY"
+          },
+          {
+            "name": "Green Shadow",
+            "sku": "SM-F9760DGOTGY"
+          }
+        ]
+      },
+      {
+        "storage": "256GB | 12GB",
+        "price": 15998,
+        "colors": [
+          {
+            "name": "Cream",
+            "sku": "SM-F9760ZWITGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F9760ZKITGY"
+          },
+          {
+            "name": "Violet Shadow",
+            "sku": "SM-F9760ZVITGY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Galaxy Z Fold8",
+    "family": "h8",
+    "baseCode": "SM-F9710",
+    "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-z-fold8-f971-600626-sm-f9710zgptgy-thumb-553869609",
+    "storageOptions": [
+      {
+        "storage": "1TB | 16GB",
+        "price": 19198,
+        "colors": [
+          {
+            "name": "Pistachio",
+            "sku": "SM-F9710ZGPTGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F9710ZKPTGY"
+          },
+          {
+            "name": "Lavender",
+            "sku": "SM-F9710LVPTGY"
+          }
+        ]
+      },
+      {
+        "storage": "512GB | 12GB",
+        "price": 15998,
+        "colors": [
+          {
+            "name": "Cream",
+            "sku": "SM-F9710ZWOTGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F9710ZKOTGY"
+          },
+          {
+            "name": "Lavender",
+            "sku": "SM-F9710LVOTGY"
+          },
+          {
+            "name": "Pistachio",
+            "sku": "SM-F9710ZGOTGY"
+          }
+        ]
+      },
+      {
+        "storage": "256GB | 12GB",
+        "price": 14398,
+        "colors": [
+          {
+            "name": "Cream",
+            "sku": "SM-F9710ZWITGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F9710ZKITGY"
+          },
+          {
+            "name": "Lavender",
+            "sku": "SM-F9710LVITGY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Galaxy Z Flip8",
+    "family": "b8",
+    "baseCode": "SM-F7760",
+    "image": "//images.samsung.com/is/image/samsung/p6pim/hk/f2607/gallery/hk-galaxy-zflip8-f776-600629-sm-f7760lgptgy-thumb-553869855",
+    "storageOptions": [
+      {
+        "storage": "512GB | 12GB",
+        "price": 11098,
+        "colors": [
+          {
+            "name": "Mint",
+            "sku": "SM-F7760LGPTGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F7760ZKPTGY"
+          },
+          {
+            "name": "Pink",
+            "sku": "SM-F7760LIPTGY"
+          }
+        ]
+      },
+      {
+        "storage": "256GB | 12GB",
+        "price": 9498,
+        "colors": [
+          {
+            "name": "Cream",
+            "sku": "SM-F7760ZWOTGY"
+          },
+          {
+            "name": "Graphite",
+            "sku": "SM-F7760ZKOTGY"
+          },
+          {
+            "name": "Pink",
+            "sku": "SM-F7760LIOTGY"
+          },
+          {
+            "name": "Mint",
+            "sku": "SM-F7760LGOTGY"
+          }
+        ]
+      }
+    ]
+  }
+]

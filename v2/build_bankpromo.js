@@ -101,7 +101,9 @@ async function buildBankPromo() {
             tierColumns.forEach(col => {
                 const maxVal = parseInt(values[get(col.max)]) || 0;
                 const discountStr = values[get(col.discount)] || '';
-                const discount = /^\d+$/.test(discountStr) ? parseFloat(discountStr) : parseFloat(discountStr) / 100;
+                const discount = discountStr !== '' 
+                    ? (/^\d+$/.test(discountStr) ? parseFloat(discountStr) : parseFloat(discountStr) / 100) 
+                    : 0;
 
                 if (maxVal > 0) {
                     bank.tiers.push({ max: maxVal, discount });

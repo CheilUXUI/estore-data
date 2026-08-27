@@ -1,0 +1,20 @@
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1,minimum-scale=1,width=device-width,interactive-widget=resizes-content,viewport-fit=cover">
+</head>
+
+<body>
+<section>
+  This section is for everyone.
+</section>
+
+<section id="ios-only" style="display: none;">
+  This section is for iOS only.
+</section>
+
+<script>
+  if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    document.getElementById('ios-only').style.display = 'block';
+  }
+</script>
+</body>

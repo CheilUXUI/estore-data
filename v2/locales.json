@@ -106,7 +106,7 @@
     "step2SelectColor": "Color",
     "step2SelectStorage": "Storage",
     "step2Title": "Choose storage and color",
-    "step3Title": "Trade-in your old device<br>Gauranteed value up to <span class=\"samsung-blue\">HK$7,200</span><sup>**</sup>",
+    "step3Title": "Trade-in your old device<br>Gauranteed value up to <span class=\"samsung-blue\">HK$7,000</span><sup>**</sup>",
     "step3SubTitle": "Enjoy Guaranteed Device Values even with scratched shells. **Values updating regularly",
     "step3SelectTradeInDevice": "Choose your old device for trade-in",
     "step4Title": "Exclusive <span class=\"samsung-blue\">HK$2,200</span> <nobr>Cash Rebate & Rewards</nobr>",
@@ -132,7 +132,7 @@
     "upgradeDiscountsLaunch": "Storage upgrade offer",
     "upgradeDiscountsAvailableLaunch": "Storage upgrade offer",
     "viewDetails": "View Details",
-    "paymentDislaimer": "# Disclaimer: The above payment rebate information provided is for reference only and subject to change by the respective banks without prior notice. Samsung Hong Kong bears no responsibility for offer discrepancies. Please refer to the officiall terms and conditions of the corresponding issuing banks for definitive details.<br>‡ Samsung | BOC(HK) Credit Card Rebate Please <a href=\"https://www.bochk.com/en/creditcard/promotions/offers/samsung202607.html\" target=\"_blank\">register here↗</a>"
+    "paymentDislaimer": "# Disclaimer: The above payment rebate information provided is for reference only and subject to change by the respective banks without prior notice. Samsung Hong Kong bears no responsibility for offer discrepancies. Please refer to the officiall terms and conditions of the corresponding issuing banks for definitive details.<br>‡ DBS Compass Visa via AliPayHK/ WeChat Pay 3% DBS$ rebate details please refer to <a href=\"https://www.dbs.com.hk/personal/promotion/CV-COMtoSpend?pid=hk-personal-zh-credit-card-compassvisa-privileges-s2 \" target=\"_blank\">this website↗</a>"
   },
   "zh": {
     "addGift": "加購",
@@ -241,7 +241,7 @@
     "step2SelectColor": "顏色",
     "step2SelectStorage": "容量",
     "step2Title": "選擇容量與顏色",
-    "step3Title": "Trade-in 舊機換新<nobr>保證價格高達<span class=\"samsung-blue\">HK$7,200</span><sup>**</sup></nobr>",
+    "step3Title": "Trade-in 舊機換新<nobr>保證價格高達<span class=\"samsung-blue\">HK$7,000</span><sup>**</sup></nobr>",
     "step3SubTitle": "機身花損亦可享價格保證 **價格持續更新",
     "step3SelectTradeInDevice": "選擇Trade-in舊裝置",
     "step4Title": "官網獨家享高達<span class=\"samsung-blue\">HK$2,200</span> <nobr>現金回贈及獎賞</nobr>",
@@ -267,6 +267,6 @@
     "upgradeDiscountsLaunch": "容量升級優惠",
     "upgradeDiscountsAvailableLaunch": "容量升級優惠",
     "viewDetails": "查看詳情",
-    "paymentDislaimer": "# 免責聲明：上述信用卡回贈資料僅供參考，並受相關發卡銀行的推廣條款及細則約束。有關優惠如有更改，恕不另行通知。三星香港對於任何資料不符概不承擔任何責任。務請參閱相關發卡銀行的官方條款及細則以獲取最終詳情。<br>‡ 中銀信用卡 | Samsung 消費獎賞 請<a href=\"https://www.bochk.com/tc/creditcard/promotions/offers/samsung202607.html\" target=\"_blank\">到此登記↗</a>"
+    "paymentDislaimer": "# 免責聲明：上述信用卡回贈資料僅供參考，並受相關發卡銀行的推廣條款及細則約束。有關優惠如有更改，恕不另行通知。三星香港對於任何資料不符概不承擔任何責任。務請參閱相關發卡銀行的官方條款及細則以獲取最終詳情。<br>‡ Compass Visa 經 AliPayHK/ WeChat Pay 簽賬3% DBS$ 回贈 詳情請參閱<a href=\"https://www.dbs.com.hk/personal-zh/promotion/CV-COMtoSpend?pid=hk-personal-zh-credit-card-compassvisa-privileges-s2\" target=\"_blank\">此網頁↗</a>"
   }
 }

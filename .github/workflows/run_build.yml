@@ -19,11 +19,9 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Install Root Dependencies
-        run: npm install
-
-      - name: Install v2 Dependencies
+      - name: Install Dependencies
         run: |
+          npm install
           if [ -d "v2" ] && [ -f "v2/package.json" ]; then
             cd v2 && npm install
           fi
@@ -32,9 +30,14 @@ jobs:
         env:
           SCRIPT_NAME: ${{ github.event.client_payload.script }}
         run: |
-          if [ -f "v2/$SCRIPT_NAME" ]; then
-            cd v2 && node "$SCRIPT_NAME"
+          # Strip 'v2/' prefix if already provided in payload to avoid duplicated pathing
+          CLEAN_SCRIPT=$(echo "$SCRIPT_NAME" | sed 's|^v2/||')
+          
+          if [ -f "v2/$CLEAN_SCRIPT" ]; then
+            echo "Executing v2/$CLEAN_SCRIPT inside v2/ directory..."
+            cd v2 && node "$CLEAN_SCRIPT"
           else
+            echo "Executing $SCRIPT_NAME in root directory..."
             node "$SCRIPT_NAME"
           fi
 
@@ -42,13 +45,13 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
+          
+          # Force add tracked changes across root and v2 directory
+          git add -A
           
           if ! git diff-index --quiet HEAD; then
             git commit -m "Automated data rebuild: ${{ github.event.client_payload.script }}"
-            
             git pull --rebase origin main
-            
             git push origin main
           else
             echo "No changes detected."

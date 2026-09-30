@@ -3,7 +3,7 @@
     "key": "dbscreditcard",
     "name": {
       "en": "DBS Credit Card",
-      "zh": "DBS信用卡"
+      "zh": "DBS 信用卡"
     },
     "max": {
       "en": "Max. $2,200 Rebate",
@@ -36,7 +36,7 @@
         "discount": 1000
       }
     ],
-    "maximum": 2000,
+    "maximum": 1000,
     "fixedDiscount": {
       "name": {
         "en": "DBS Compass Visa via AliPayHK/ WeChat Pay 3% DBS$ rebate (Registration Required)<sup>‡</sup> up to",
@@ -45,6 +45,36 @@
       "value": 200
     },
     "priority": 1,
+    "isRecommended": true
+  },
+  {
+    "key": "welabdebitcard",
+    "name": {
+      "en": "WeLab Debit Card",
+      "zh": "WeLab 扣賬卡"
+    },
+    "max": {
+      "en": "Max. 5% Rebate",
+      "zh": "高達5%回贈"
+    },
+    "rebateName": {
+      "en": "Samsung | WeLab Bank Global Wallet Debit Card cashback",
+      "zh": "Samsung | WeLab Bank Global Wallet 現金回贈"
+    },
+    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/welab.jpg",
+    "tiers": [
+      {
+        "max": 3000,
+        "discount": 0
+      },
+      {
+        "max": 99999999,
+        "discount": 0.05
+      }
+    ],
+    "maximum": 2000,
+    "fixedDiscount": null,
+    "priority": 2,
     "isRecommended": true
   },
   {
@@ -76,7 +106,7 @@
       },
       "value": 500
     },
-    "priority": 2,
+    "priority": 3,
     "isRecommended": false
   },
   {
@@ -107,38 +137,6 @@
         "zh": "恒生 MMPOWER World Mastercard +FUN Dollars回贈<sup>#</sup> 高達"
       },
       "value": 500
-    },
-    "priority": 3,
-    "isRecommended": false
-  },
-  {
-    "key": "aeoncardwakuwaku",
-    "name": {
-      "en": "AEON Card WAKUWAKU",
-      "zh": "AEON Card WAKUWAKU"
-    },
-    "max": {
-      "en": "Max. 6% Rebate",
-      "zh": "高達6%回贈"
-    },
-    "rebateName": {
-      "en": "AEON Card WAKUWAKU",
-      "zh": "AEON Card WAKUWAKU"
-    },
-    "logo": "https://images.samsung.com/is/image/samsung/assets/hk/offer/estore-data/logo-aeon.png",
-    "tiers": [
-      {
-        "max": 99999999,
-        "discount": 0
-      }
-    ],
-    "maximum": 0,
-    "fixedDiscount": {
-      "name": {
-        "en": "AEON CARD WAKUWAKU Rebate<sup>#</sup> up to",
-        "zh": "AEON CARD WAKUWAKU 回贈<sup>#</sup> 高達"
-      },
-      "value": 214
     },
     "priority": 4,
     "isRecommended": false

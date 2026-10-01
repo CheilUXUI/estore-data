@@ -52,7 +52,7 @@
       "sku": "SM-F9760ZVPTGY",
       "rrp": 20798,
       "lsvDiscount": 800,
-      "InStockStatus": "Y",
+      "InStockStatus": "N",
       "oosLink": "https://www.samsung.com/hk/smartphones/galaxy-z-fold8-ultra/buy/?modelCode=SM-F9760ZVPTGY",
       "oosLinkEn": "https://www.samsung.com/hk_en/smartphones/galaxy-z-fold8-ultra/buy/?modelCode=SM-F9760ZVPTGY",
       "gifts": []
@@ -90,7 +90,7 @@
       "sku": "SM-F9760ZKOTGY",
       "rrp": 17598,
       "lsvDiscount": 400,
-      "InStockStatus": "Y",
+      "InStockStatus": "N",
       "oosLink": "https://www.samsung.com/hk/smartphones/galaxy-z-fold8-ultra/buy/?modelCode=SM-F9760ZKOTGY",
       "oosLinkEn": "https://www.samsung.com/hk_en/smartphones/galaxy-z-fold8-ultra/buy/?modelCode=SM-F9760ZKOTGY",
       "gifts": []
@@ -508,7 +508,7 @@
       "sku": "SM-F7760LGOTGY",
       "rrp": 9498,
       "lsvDiscount": 0,
-      "InStockStatus": "Y",
+      "InStockStatus": "N",
       "oosLink": "https://www.samsung.com/hk/smartphones/galaxy-z-flip8/buy/?modelCode=SM-F7760LGOTGY",
       "oosLinkEn": "https://www.samsung.com/hk_en/smartphones/galaxy-z-flip8/buy/?modelCode=SM-F7760LGOTGY",
       "gifts": []

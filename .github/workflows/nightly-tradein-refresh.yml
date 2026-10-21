@@ -1,0 +1,77 @@
+name: Nightly Trade-In Refresh
+
+# Rebuilds shanhs_models.json / step3models.json / step3models_slim.json from the
+# ShanHS recycle API and commits the results back to this branch.
+# Mirrors nightly-tradein-refresh.bat (build_shanhs_models -> build_step3 -> build_step3_slim).
+#
+# Required repo secrets (Settings -> Secrets and variables -> Actions):
+#   SHANHS_APP_ID, SHANHS_APP_SECRET, SHANHS_UPSTREAM
+# (values are in the local .env.shanhs.local file, which is gitignored)
+
+on:
+  schedule:
+    # 23:30 Hong Kong time = 15:30 UTC
+    - cron: '30 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Fail fast with a clear message when the repo secrets are not configured
+      # (silent default creds otherwise produce a cryptic 'sign error' exit 1).
+      - name: Check ShanHS secrets
+        env:
+          SHANHS_APP_ID: ${{ secrets.SHANHS_APP_ID }}
+          SHANHS_APP_SECRET: ${{ secrets.SHANHS_APP_SECRET }}
+          SHANHS_UPSTREAM: ${{ secrets.SHANHS_UPSTREAM }}
+        run: |
+          missing=""
+          [ -z "$SHANHS_APP_ID" ] && missing="$missing SHANHS_APP_ID"
+          [ -z "$SHANHS_APP_SECRET" ] && missing="$missing SHANHS_APP_SECRET"
+          [ -z "$SHANHS_UPSTREAM" ] && missing="$missing SHANHS_UPSTREAM"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repo secrets:$missing — set them under Settings -> Secrets and variables -> Actions (values are in .env.shanhs.local)"
+            exit 1
+          fi
+          echo "All ShanHS secrets present."
+
+      - name: Build shanhs_models.json
+        env:
+          SHANHS_APP_ID: ${{ secrets.SHANHS_APP_ID }}
+          SHANHS_APP_SECRET: ${{ secrets.SHANHS_APP_SECRET }}
+          SHANHS_UPSTREAM: ${{ secrets.SHANHS_UPSTREAM }}
+        run: node build_shanhs_models.js
+
+      - name: Build step3models.json
+        env:
+          SHANHS_APP_ID: ${{ secrets.SHANHS_APP_ID }}
+          SHANHS_APP_SECRET: ${{ secrets.SHANHS_APP_SECRET }}
+          SHANHS_UPSTREAM: ${{ secrets.SHANHS_UPSTREAM }}
+        run: node build_step3.js
+
+      - name: Build step3models_slim.json
+        run: node build_step3_slim.js
+
+      # step3models.json is the 3.8MB intermediate and is gitignored on purpose;
+      # only the two JSONs the page actually loads are committed.
+      - name: Commit refreshed JSONs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shanhs_models.json step3models_slim.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: nightly trade-in data refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi

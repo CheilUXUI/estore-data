@@ -1,0 +1,7 @@
+name = "shanhs-quote-proxy"
+main = "worker.js"
+compatibility_date = "2026-08-13"
+
+[vars]
+SHANHS_APP_ID = "120"
+SHANHS_UPSTREAM = "m.shanhs.com"

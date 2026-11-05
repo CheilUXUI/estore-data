@@ -19,6 +19,7 @@ productsList.forEach(p => {
   const colorName = p.colorEn || '';
   const sku = p.sku || '';
   const price = parseInt(p.rrp) || 0;
+  const lsvDiscount = parseInt(p.lsvDiscount) || 0;
 
   if (!modelName || !storage || !colorName || !sku) return;
 
@@ -36,7 +37,7 @@ productsList.forEach(p => {
 
   let storageTier = modelMap[modelName].storageOptions.find(s => s.storage === storage);
   if (!storageTier) {
-    storageTier = { storage, price, colors: [] };
+    storageTier = { storage, price, lsvDiscount, colors: [] };
     modelMap[modelName].storageOptions.push(storageTier);
   }
 

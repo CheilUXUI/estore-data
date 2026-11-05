@@ -8,6 +8,7 @@
       {
         "storage": "1TB | 16GB",
         "price": 20798,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Green Shadow",
@@ -26,6 +27,7 @@
       {
         "storage": "512GB | 12GB",
         "price": 17598,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Cream",
@@ -48,6 +50,7 @@
       {
         "storage": "256GB | 12GB",
         "price": 15998,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Cream",
@@ -74,6 +77,7 @@
       {
         "storage": "1TB | 16GB",
         "price": 19198,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Pistachio",
@@ -92,6 +96,7 @@
       {
         "storage": "512GB | 12GB",
         "price": 15998,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Cream",
@@ -114,6 +119,7 @@
       {
         "storage": "256GB | 12GB",
         "price": 14398,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Cream",
@@ -140,6 +146,7 @@
       {
         "storage": "512GB | 12GB",
         "price": 11098,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Mint",
@@ -158,6 +165,7 @@
       {
         "storage": "256GB | 12GB",
         "price": 9498,
+        "lsvDiscount": 511,
         "colors": [
           {
             "name": "Cream",
